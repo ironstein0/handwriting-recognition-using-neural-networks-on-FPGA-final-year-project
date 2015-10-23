@@ -5,20 +5,51 @@ from PIL import Image
 class image_processing() :
     
     def __init__(self) :
-        self.mean_filter_kernel = [9,[[1,1,1],[1,1,1],[1,1,1]]]
-        self.gaussian_smoothing_kernel = [273,[[1,4,7,4,1],[4,16,26,16,4],[7,26,41,26,7],\
-                                               [4,16,26,16,4],[1,4,7,4,1]]]
-        #self.gaussian_smoothing_kernel = [273,[[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]]]
-        self.edge_detection_kernel = [1,[[-1,-1,-1],\
-                                                       [-1, 8,-1],\
-                                                       [-1,-1, -1]]]
-        self.vertical_edge_detection_kernel = [1,[[-1,0,1],[-1,0,1],[-1,0,1]]]
-        self.horizontal_edge_detection_kernel = [1,[[1,1,1],[0,0,0],[-1,-1,-1]]]
+        # self.gaussian_smoothing_kernel = [273,
+        # [[1,4 ,7 ,4 ,1],
+        #  [4,16,26,16,4],
+        #  [7,26,41,26,7],
+        #  [4,16,26,16,4],
+        #  [1,4 ,7 ,4 ,1]]]
+    
+        self.edge_detection_kernel = [1,
+        [[-1,-1,-1],
+         [-1, 8,-1],
+         [-1,-1,-1]]]
 
-    def mean_filter(self,image) :
-        return self.convolution(image,self.mean_filter_kernel[1],self.mean_filter_kernel[0])
+        self.vertical_edge_detection_kernel = [1,
+        [[-1,0,1],
+         [-1,0,1],
+         [-1,0,1]]]
+
+        self.horizontal_edge_detection_kernel = [1,
+        [[ 1, 1, 1],
+         [ 0, 0, 0],
+         [-1,-1,-1]]]
+        
+        self.gaussian_smoothing_kernel = [100,
+        [[1,1,1,1,1,1,1,1,1,1],
+         [1,1,1,1,1,1,1,1,1,1],
+         [1,1,1,1,1,1,1,1,1,1],
+         [1,1,1,1,1,1,1,1,1,1],
+         [1,1,1,1,1,1,1,1,1,1],
+         [1,1,1,1,1,1,1,1,1,1],
+         [1,1,1,1,1,1,1,1,1,1],
+         [1,1,1,1,1,1,1,1,1,1],
+         [1,1,1,1,1,1,1,1,1,1],
+         [1,1,1,1,1,1,1,1,1,1]]]
+
 
     def gaussian_filter(self,image) :
+        #---------changes
+        # new_image = []
+        # for row in image :
+        #     new_image.append([])  
+        #     for pixel in row : 
+        #         new_image[-1].append(np.uint8(255 - int(pixel)))
+        # image = np.array(new_image)
+        # cv2.imshow('inverted',image)
+        #-------------
         smoothened_image = self.convolution(image,self.gaussian_smoothing_kernel[1],self.gaussian_smoothing_kernel[0])
         return smoothened_image
 
@@ -72,6 +103,14 @@ class image_processing() :
                     return_image[-1].append(np.uint8(0))
                 else :
                     return_image[-1].append(np.uint8(255))
+
+        #--------testing-------------
+        # new_image = []
+        # for row in image : 
+        #     new_image.append([]) 
+        #     for pixel in row : 
+        #         new_image[-1].append(np.uint8(0))
+        #----------------------------
         return np.array(return_image)
                     
 
@@ -101,12 +140,12 @@ class image_processing() :
 
     
 impr = image_processing()
-image = cv2.imread('sample_image.jpeg',0)
+image = cv2.imread('sample_image_3.png',0)
 cv2.imshow('image',image)
-smoothened_edge_detection = impr.smoothened_edge_detection(image)
-im = Image.fromarray(smoothened_edge_detection)
-im.save('/Users/ironstein/Documents/projects working directory/handwriting recognition using \
-neural networks on FPGA final year project/image processing/processed images/smoothened_image.bmp')
+smoothened_edge_detection = impr.gaussian_filter(image)
+cv2.imshow('smoothned image',smoothened_edge_detection)
+#im = Image.fromarray(smoothened_edge_detection)
+#im.save('/Users/ironstein/Documents/projects working directory/handwriting recognition using \neural networks on FPGA final year project/image processing/processed images/smoothened_image.bmp')
 #cv2.imshow('smoothened_edge_detection',smoothened_edge_detection)
 #cv2.imshow('vertical_edge_detection',impr.vertical_edge_detection(image))
 #cv2.imshow('horizontal_edge_detection',impr.horizontal_edge_detection(image))
