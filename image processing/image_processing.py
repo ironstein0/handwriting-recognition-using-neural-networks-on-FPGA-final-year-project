@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 
 class image_processing() :
-    
+
     def __init__(self) :
         self.mean_filter_kernel = [9,[[1,1,1],[1,1,1],[1,1,1]]]
         self.gaussian_smoothing_kernel = [273,[[1,4,7,4,1],[4,16,26,16,4],[7,26,41,26,7],\
@@ -73,7 +73,7 @@ class image_processing() :
                 else :
                     return_image[-1].append(np.uint8(255))
         return np.array(return_image)
-                    
+
 
     def convolution(self,image,kernel,scaling_factor = 1) :
 
@@ -90,7 +90,7 @@ class image_processing() :
                 for m1_pixel,m2_pixel in zip(m1_row,m2_row) :
                     return_value += int(m1_pixel)*int(m2_pixel)
             return np.uint8(return_value/scaling_factor)
-                
+
         for row in range(image_height - kernel_height + 1) :
             return_image.append([])
             for pixel in range(image_width - kernel_width + 1) :
@@ -99,7 +99,7 @@ class image_processing() :
                 return_image[-1].append(element_wise_matrix_multiplication(image_slice,kernel,scaling_factor))
         return np.array(return_image)
 
-    
+
 impr = image_processing()
 image = cv2.imread('sample_image.jpeg',0)
 cv2.imshow('image',image)

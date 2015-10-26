@@ -5,12 +5,12 @@ from PIL import Image
 class image_processing() :
     
     def __init__(self) :
-        # self.gaussian_smoothing_kernel = [273,
-        # [[1,4 ,7 ,4 ,1],
-        #  [4,16,26,16,4],
-        #  [7,26,41,26,7],
-        #  [4,16,26,16,4],
-        #  [1,4 ,7 ,4 ,1]]]
+        self.gaussian_smoothing_kernel = [273,
+        [[1,4 ,7 ,4 ,1],
+         [4,16,26,16,4],
+         [7,26,41,26,7],
+         [4,16,26,16,4],
+         [1,4 ,7 ,4 ,1]]]
     
         self.edge_detection_kernel = [1,
         [[-1,-1,-1],
@@ -27,18 +27,37 @@ class image_processing() :
          [ 0, 0, 0],
          [-1,-1,-1]]]
         
-        self.gaussian_smoothing_kernel = [100,
-        [[1,1,1,1,1,1,1,1,1,1],
-         [1,1,1,1,1,1,1,1,1,1],
-         [1,1,1,1,1,1,1,1,1,1],
-         [1,1,1,1,1,1,1,1,1,1],
-         [1,1,1,1,1,1,1,1,1,1],
-         [1,1,1,1,1,1,1,1,1,1],
-         [1,1,1,1,1,1,1,1,1,1],
-         [1,1,1,1,1,1,1,1,1,1],
-         [1,1,1,1,1,1,1,1,1,1],
-         [1,1,1,1,1,1,1,1,1,1]]]
+        self.testing_kernel = [23,
+        [[-2,-2,-2,-2,-2,-2,-2,-2,-2],
+         [-2,-1,-1,-1,-1,-1,-1,-1,-2],
+         [-2,-1, 3, 3, 3, 3, 3,-1,-2],
+         [-2,-1, 3, 2, 2, 2, 3,-1,-2],
+         [-2,-1, 3, 2, 1, 2, 3,-1,-2],
+         [-2,-1, 3, 2, 2, 2, 3,-1,-2],
+         [-2,-1, 3, 3, 3, 3, 3,-1,-2],
+         [-2,-1,-1,-1,-1,-1,-1,-1,-2],
+         [-2,-2,-2,-2,-2,-2,-2,-2,-2]]]
 
+        #---------testing-----------
+        count = 0
+        for row in self.testing_kernel[1] : 
+            for element in row : 
+                count += element
+        print(count)
+        #--------------------------
+
+    def greyscale_to_bnw(self,image) : 
+        return_image = []
+        for row in image : 
+            return_image.append([])
+            # for pixel in row : 
+            #     if(pixel > 127) : 
+            #         return_image[-1].append(np.uint8(255))
+            #     else : 
+            #         return_image[-1].append(np.uint8(0))
+            for pixel in row : 
+                return_image[-1].append(np.uint8(255))
+        return np.array(return_image)
 
     def gaussian_filter(self,image) :
         #---------changes
@@ -71,7 +90,8 @@ class image_processing() :
         return np.array(return_image)
 
     def vertical_edge_detection(self,image) :
-        smoothened_edge_detection_image = self.convolution(self.gaussian_filter(image),self.vertical_edge_detection_kernel[1])
+        #smoothened_edge_detection_image = self.convolution(self.gaussian_filter(image),self.vertical_edge_detection_kernel[1])
+        smoothened_edge_detection_image = image
         return_image = []
         for row in smoothened_edge_detection_image :
             return_image.append([])
@@ -83,15 +103,16 @@ class image_processing() :
         return np.array(return_image)
 
     def horizontal_edge_detection(self,image) :
-        smoothened_edge_detection_image = self.convolution(self.gaussian_filter(image),self.horizontal_edge_detection_kernel[1])
+        #smoothened_edge_detection_image = self.convolution(self.gaussian_filter(image),self.horizontal_edge_detection_kernel[1])
+        smoothened_edge_detection_image = image
         return_image = []
         for row in smoothened_edge_detection_image :
             return_image.append([])
             for pixel in row :
-                if(pixel < 50 or pixel > 200) :
+                if(pixel < 20 or pixel > 200) :
                     return_image[-1].append(np.uint8(255))
                 else :
-                    return_image[-1].append(np.uint8(0))
+                    return_image[-1].append(pixel)
         return np.array(return_image)
 
     def combined_horizontal_and_vertical(self,image) :
@@ -104,13 +125,19 @@ class image_processing() :
                 else :
                     return_image[-1].append(np.uint8(255))
 
-        #--------testing-------------
-        # new_image = []
-        # for row in image : 
-        #     new_image.append([]) 
+        #----------testing----------------
+        # i = self.convolution(np.array(return_image),self.testing_kernel[1])
+        # return_image = []
+        # for row in i :
+        #     return_image.append([]) 
         #     for pixel in row : 
-        #         new_image[-1].append(np.uint8(0))
-        #----------------------------
+        #         if int(pixel) < 50 : 
+        #             return_image[-1].append(np.uint8(255))
+        #         else : 
+        #             return_image[-1].append(np.uint8(0))
+        # return(np.array(return_image))
+        #---------------------------------
+
         return np.array(return_image)
                     
 
@@ -140,15 +167,15 @@ class image_processing() :
 
     
 impr = image_processing()
-image = cv2.imread('sample_image_3.png',0)
+image = cv2.imread('sample_image_6.jpg',0)
 cv2.imshow('image',image)
-smoothened_edge_detection = impr.gaussian_filter(image)
-cv2.imshow('smoothned image',smoothened_edge_detection)
+# smoothened_edge_detection = impr.gaussian_filter(image)
+# cv2.imshow('smoothned image',smoothened_edge_detection)
 #im = Image.fromarray(smoothened_edge_detection)
 #im.save('/Users/ironstein/Documents/projects working directory/handwriting recognition using \neural networks on FPGA final year project/image processing/processed images/smoothened_image.bmp')
 #cv2.imshow('smoothened_edge_detection',smoothened_edge_detection)
-#cv2.imshow('vertical_edge_detection',impr.vertical_edge_detection(image))
-#cv2.imshow('horizontal_edge_detection',impr.horizontal_edge_detection(image))
+cv2.imshow('vertical_edge_detection',impr.vertical_edge_detection(image))
+cv2.imshow('horizontal_edge_detection',impr.horizontal_edge_detection(image))
 cv2.imshow('combined_horizontal_and_vertical',impr.combined_horizontal_and_vertical(image))
 cv2.waitKey(0)
 cv2.destroyAllWindows()

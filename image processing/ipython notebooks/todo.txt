@@ -1,0 +1,10 @@
+
+--> comparision between python and C for execution time for convolution operation
+
+1)'''horizontal edge detection, vertical edge detection and gaussian filtering'''
+2)horizontal and vertical from both directions in just one nested for loop
+3)advanced high speed convolution in C (and real time edge detection if possible)
+3)connedted object segmentation
+5)compressing or expanding an image to a predetermined size (or some alternative)
+4)design neural network for image sizes obtained from segmentation and sizing
+5)neural network training and classification
