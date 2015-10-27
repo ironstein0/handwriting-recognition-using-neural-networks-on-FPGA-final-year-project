@@ -1,5 +1,3 @@
-import cv2
-import numpy as np
 from PIL import Image
 
 class image_processing() :
