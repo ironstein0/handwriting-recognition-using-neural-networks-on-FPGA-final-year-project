@@ -1,0 +1,656 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.5)  7 NOV 2015 04:12
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**project_report.tex -recorder
+(./project_report.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count99
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count100
+\float@exts=\toks20
+\float@box=\box28
+\@float@everytoks=\toks21
+\@floatcapt=\box29
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen114
+\captionmargin@=\dimen115
+\captionwidth=\dimen116
+\caption@tempdima=\dimen117
+\caption@indent=\dimen118
+\caption@parindent=\dimen119
+\caption@hangindent=\dimen120
+)
+\c@ContinuedFloat=\count101
+Package caption Info: float package is loaded.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count102
+\c@subtable=\count103
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count104
+\c@Blindtext=\count105
+\c@blind@countparstart=\count106
+\blind@countxx=\count107
+\blindtext@numBlindtext=\count108
+\blind@countyy=\count109
+\c@blindlist=\count110
+\c@blindlistlevel=\count111
+\c@blindlist@level=\count112
+\blind@listitem=\count113
+\c@blind@listcount=\count114
+\c@blind@levelcount=\count115
+\blind@mathformula=\count116
+\blind@Mathformula=\count117
+\c@blind@randomcount=\count118
+\c@blind@randommax=\count119
+\c@blind@pangramcount=\count120
+\c@blind@pangrammax=\count121
+)
+(./project_report.aux)
+\openout1 = `project_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count122
+\scratchdimen=\dimen121
+\scratchbox=\box30
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count125
+\MPscratchDim=\dimen122
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks23
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+Overfull \hbox (21.69496pt too wide) in paragraph at lines 24--24
+ [][] 
+ []
+
+[1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+[1]
+Overfull \hbox (61.34933pt too wide) in paragraph at lines 51--62
+ [] \OT1/cmr/m/n/10 The fol-low-ing is the re-sult of con-vo-lu-tion of an im-a
+ge with the $3 \OMS/cmsy/m/n/10 ^^C \OT1/cmr/m/n/10 3 \OML/cmm/m/it/10 mean fil
+ter [] []$ 
+ []
+
+<images/original_image.png, id=19, 190.7125pt x 240.9pt>
+File: images/original_image.png Graphic file (type png)
+
+<use images/original_image.png>
+Package pdftex.def Info: images/original_image.png used on input line 67.
+(pdftex.def)             Requested size: 103.50105pt x 130.73834pt.
+
+<images/mean_filter_after.png, id=21, 190.7125pt x 240.9pt>
+File: images/mean_filter_after.png Graphic file (type png)
+
+<use images/mean_filter_after.png>
+Package pdftex.def Info: images/mean_filter_after.png used on input line 73.
+(pdftex.def)             Requested size: 103.50105pt x 130.73834pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 65--77
+[]$[]$ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
+
+ []
+
+[2 <./images/original_image.png> <./images/mean_filter_after.png>]
+<images/vertical_edge_detection.png, id=28, 200.75pt x 250.9375pt>
+File: images/vertical_edge_detection.png Graphic file (type png)
+
+<use images/vertical_edge_detection.png>
+Package pdftex.def Info: images/vertical_edge_detection.png used on input line 
+117.
+(pdftex.def)             Requested size: 103.50105pt x 129.37784pt.
+
+<images/horizontal_edge_detection.png, id=29, 200.75pt x 250.9375pt>
+File: images/horizontal_edge_detection.png Graphic file (type png)
+
+<use images/horizontal_edge_detection.png>
+Package pdftex.def Info: images/horizontal_edge_detection.png used on input lin
+e 123.
+(pdftex.def)             Requested size: 103.50105pt x 129.37784pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 115--127
+[]$[]$ $[]$ 
+ []
+
+<images/horizontal_and_vertical.png, id=30, 200.75pt x 250.9375pt>
+File: images/horizontal_and_vertical.png Graphic file (type png)
+
+<use images/horizontal_and_vertical.png>
+Package pdftex.def Info: images/horizontal_and_vertical.png used on input line 
+134.
+(pdftex.def)             Requested size: 103.50105pt x 129.37784pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+[3 <./images/vertical_edge_detection.png> <./images/horizontal_edge_detection.p
+ng> <./images/horizontal_and_vertical.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 146--165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--185
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--194
+
+ []
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no — in font cmr10!
+<images/sobel_x.png, id=37, 200.75pt x 240.9pt>
+File: images/sobel_x.png Graphic file (type png)
+ <use images/sobel_x.png>
+Package pdftex.def Info: images/sobel_x.png used on input line 231.
+(pdftex.def)             Requested size: 103.50105pt x 124.20271pt.
+
+<images/sobel_y.png, id=38, 200.75pt x 240.9pt>
+File: images/sobel_y.png Graphic file (type png)
+ <use images/sobel_y.png>
+Package pdftex.def Info: images/sobel_y.png used on input line 237.
+(pdftex.def)             Requested size: 103.50105pt x 124.20271pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 229--241
+[]$[]$ $[]$ 
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 243--246
+
+ []
+
+<images/magnitude.png, id=42, 200.75pt x 240.9pt>
+File: images/magnitude.png Graphic file (type png)
+ <use images/magnitude.png>
+Package pdftex.def Info: images/magnitude.png used on input line 251.
+(pdftex.def)             Requested size: 103.50105pt x 124.20271pt.
+
+<images/angle.png, id=43, 200.75pt x 240.9pt>
+File: images/angle.png Graphic file (type png)
+ <use images/angle.png>
+Package pdftex.def Info: images/angle.png used on input line 257.
+(pdftex.def)             Requested size: 103.50105pt x 124.20271pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 249--261
+[]$[]$ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
+
+ []
+
+[5 <./images/sobel_x.png> <./images/sobel_y.png> <./images/magnitude.png> <./im
+ages/angle.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 272--274
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--274
+
+ []
+
+<images/impulse_response_of_gaussian.png, id=52, 695.59875pt x 495.8525pt>
+File: images/impulse_response_of_gaussian.png Graphic file (type png)
+
+<use images/impulse_response_of_gaussian.png>
+Package pdftex.def Info: images/impulse_response_of_gaussian.png used on input 
+line 277.
+(pdftex.def)             Requested size: 103.50105pt x 73.77693pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
+
+ []
+
+<images/2d_gaussian.png, id=53, 611.28375pt x 455.7025pt>
+File: images/2d_gaussian.png Graphic file (type png)
+
+<use images/2d_gaussian.png>
+Package pdftex.def Info: images/2d_gaussian.png used on input line 287.
+(pdftex.def)             Requested size: 103.50105pt x 77.15549pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--290
+
+ []
+
+[6 <./images/impulse_response_of_gaussian.png> <./images/2d_gaussian.png>]
+<images/log_1.png, id=62, 331.2375pt x 215.80624pt>
+File: images/log_1.png Graphic file (type png)
+ <use images/log_1.png>
+Package pdftex.def Info: images/log_1.png used on input line 299.
+(pdftex.def)             Requested size: 103.50105pt x 67.4327pt.
+
+<images/log_2.png, id=63, 331.2375pt x 215.80624pt>
+File: images/log_2.png Graphic file (type png)
+ <use images/log_2.png>
+Package pdftex.def Info: images/log_2.png used on input line 305.
+(pdftex.def)             Requested size: 103.50105pt x 67.4327pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 297--309
+[]$[]$ $[]$ 
+ []
+
+<images/log.png, id=64, 200.75pt x 240.9pt>
+File: images/log.png Graphic file (type png)
+ <use images/log.png>
+Package pdftex.def Info: images/log.png used on input line 317.
+(pdftex.def)             Requested size: 103.50105pt x 124.20271pt.
+
+<images/log_threshold.png, id=65, 200.75pt x 240.9pt>
+File: images/log_threshold.png Graphic file (type png)
+
+<use images/log_threshold.png>
+Package pdftex.def Info: images/log_threshold.png used on input line 323.
+(pdftex.def)             Requested size: 103.50105pt x 124.20271pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 315--327
+[]$[]$ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
+
+ []
+
+[7 <./images/log_1.png> <./images/log_2.png> <./images/log.png> <./images/log_t
+hreshold.png>]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+Missing character: There is no Â in font cmr10!
+Missing character: There is no ° in font cmr10!
+Missing character: There is no Â in font cmr10!
+Missing character: There is no ° in font cmr10!
+ [8]
+<images/before_non_maximum_supression.png, id=76, 200.75pt x 240.9pt>
+File: images/before_non_maximum_supression.png Graphic file (type png)
+
+<use images/before_non_maximum_supression.png>
+Package pdftex.def Info: images/before_non_maximum_supression.png used on input
+ line 364.
+(pdftex.def)             Requested size: 103.50105pt x 124.20271pt.
+
+<images/after_non_maximum_supression.png, id=77, 200.75pt x 240.9pt>
+File: images/after_non_maximum_supression.png Graphic file (type png)
+
+<use images/after_non_maximum_supression.png>
+Package pdftex.def Info: images/after_non_maximum_supression.png used on input 
+line 370.
+(pdftex.def)             Requested size: 103.50105pt x 124.20271pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 362--374
+[]$[]$ $[]$ 
+ []
+
+<images/before_erosion.png, id=78, 200.75pt x 240.9pt>
+File: images/before_erosion.png Graphic file (type png)
+
+<use images/before_erosion.png>
+Package pdftex.def Info: images/before_erosion.png used on input line 391.
+(pdftex.def)             Requested size: 103.50105pt x 124.20271pt.
+
+<images/after_erosion.png, id=79, 200.75pt x 240.9pt>
+File: images/after_erosion.png Graphic file (type png)
+
+<use images/after_erosion.png>
+Package pdftex.def Info: images/after_erosion.png used on input line 397.
+(pdftex.def)             Requested size: 103.50105pt x 124.20271pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 389--401
+[]$[]$ $[]$ 
+ []
+
+[9 <./images/before_non_maximum_supression.png> <./images/after_non_maximum_sup
+ression.png>] [10 <./images/before_erosion.png> <./images/after_erosion.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
+
+ []
+
+[11] (./project_report.aux) ) 
+Here is how much of TeX's memory you used:
+ 3518 strings out of 493089
+ 54504 string characters out of 6134842
+ 121370 words of memory out of 5000000
+ 6957 multiletter control sequences out of 15000+600000
+ 9023 words of font info for 33 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,8n,38p,563b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
+pfb>
+Output written on project_report.pdf (12 pages, 1355276 bytes).
+PDF statistics:
+ 138 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+
