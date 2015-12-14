@@ -1,4 +1,5 @@
 # handwriting-recognition-using-neural-networks-on-FPGA-final-year-project
+######Collaborators: Riyansh Karani, Dhruv Reshamwala, Akash Rana, Kishore Saldanha
 My final Year project, involving a neural network and image processing based system for handwriting recognition.
 Working on an FPGA implementation for the same.
 
