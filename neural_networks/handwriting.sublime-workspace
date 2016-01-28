@@ -1,0 +1,621 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"kerne",
+				"kernel_size"
+			],
+			[
+				"gene",
+				"generate_gaussian_smoothening_kernel"
+			],
+			[
+				"nor",
+				"normalized_kernel"
+			],
+			[
+				"ca",
+				"calculate_gaussian_function_value"
+			],
+			[
+				"smo",
+				"smoothened_edge_detection"
+			],
+			[
+				"return",
+				"return_image"
+			],
+			[
+				"retur",
+				"return_image"
+			],
+			[
+				"test",
+				"testing_kernel"
+			],
+			[
+				"c",
+				"convolution"
+			],
+			[
+				"sm",
+				"smoothened_edge_detection"
+			],
+			[
+				"ent",
+				"entice"
+			],
+			[
+				"d",
+				"dictionary"
+			],
+			[
+				"alread",
+				"already_wrong_words_count"
+			],
+			[
+				"alre",
+				"already_wrong_words"
+			],
+			[
+				"rando",
+				"random_word"
+			],
+			[
+				"working_dire",
+				"working_directory"
+			],
+			[
+				"not",
+				"not_answered_words"
+			],
+			[
+				"words",
+				"words"
+			],
+			[
+				"wo",
+				"word_list"
+			],
+			[
+				"word",
+				"word_lists"
+			],
+			[
+				"i",
+				"idiosyncracy"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"anaco",
+				"Anaconda: Run Current File Tests"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"javatar",
+				"Javatar: Create new..."
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"late",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"la",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"La",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"open",
+				"Open IPython Notebook"
+			],
+			[
+				"open ",
+				"Open Current Notebook As Ipynb File"
+			],
+			[
+				"sublimeIpyt",
+				"SublimeREPL: Python - IPython"
+			],
+			[
+				"add repo",
+				"Package Control: Add Repository"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": true,
+		"side_bar_visible": true,
+		"status_bar_visible": true
+	},
+	"expanded_folders":
+	[
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/codes"
+	],
+	"file_history":
+	[
+		"/Users/ironstein/Documents/projects_working_directory/accelerometer-based-pen-mini-project-semester-5/codes/avr_C_codes/pen_mark3.c",
+		"/Users/ironstein/Documents/projects_working_directory/accelerometer-based-pen-mini-project-semester-5/codes/avr_C_codes/USART.c",
+		"/Users/ironstein/Documents/projects_working_directory/accelerometer-based-pen-mini-project-semester-5/codes/avr_C_codes/I2C.c",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/testing/gui_string_handling/gui_string_handling.py",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/testing/gui_string_handling/variable2.txt",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/testing/gui_string_handling/string_handling.py",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/subordinate_directory/dummy_dynamixel/dummy_dynamixel.py",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/subordinate_directory/dummy_dynamixel/dummy_dynamixel_memory_2.txt",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/untitled",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/subordinate_directory/dummy_dynamixel.py",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/subordinate_directory/dummy_dynamixel/dummy_dynamixel_memory_1.txt",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/subordinate_directory/string_handling.py",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/env/sublime/projectscara2014.sublime-",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/env/sublime/projectscara2014.sublime-project",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/subordinate_directory/dummy_dynamixel/dummy_dynamixel_memory.txt",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/main_directory/gui/gui_init.py",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/main_directory/lookup.py",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/subordinate_directory/serial_ports_setup.py",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/subordinate_directory/dummy_dynamixel/__init__.py",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/main_directory/gui/__init__.py",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/main_directory/dynamixel.py",
+		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/subordinate_directory/status_packet_handling.py",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/Codes/tensorflow_virtualenv/source/tensorflow_basics/tensorflow_test1.py",
+		"/Users/ironstein/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/Codes/tensorflow_virtualenv/sublime/tensorflow_virtualenv.sublime-project",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/Codes/tensorflow_virtualenv/source/tensorflow_test1.py",
+		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/neural networks/tensorflow_virtualenv/source/test1.py",
+		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/neural networks/tensorflow_virtualenv/$",
+		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/neural networks/tensorflow_virtualenv/test.py",
+		"/users/ironstein/desktop/test.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/testing/block_position_setup.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/working_directory/subordinate_directory/dummy_dynamixel.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/working_directory/subordinate_directory/serial_ports_setup.py",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final_mark2/run/__init__.py",
+		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/neural networks/Codes/neural-networks-and-deep-learning Michael Nielsen/src/mnist_loader.py",
+		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/neural networks/ironstein_codes/mnist_loader.py",
+		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/neural networks/Codes/neural-networks-and-deep-learning Michael Nielsen/src/network.py",
+		"/Users/ironstein/Desktop/viraj problems/problem1.c",
+		"/Users/ironstein/Desktop/viraj problems/problem2.c",
+		"/Users/ironstein/Documents/projects working directory/ironstein1994.github.io/html/mind_palace/neural_networks.html",
+		"/Users/ironstein/Documents/MIT/6.005/codes/lecture2/src/object_oriented_programming.java",
+		"/Users/ironstein/Documents/MIT/6.005/codes/lecture1_java_basics/src/object_oriented_programming.java",
+		"/Users/ironstein/Documents/MIT/6.005/codes/lecture1/src/hailstone_mark2.java",
+		"/Users/ironstein/Documents/MIT/6.005/codes/javatar_testing/src/javatar/simple/demo/Hailstone.java",
+		"/Users/ironstein/Documents/MIT/6.005/codes/javatar_testing/src/main/java.java",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-Debugger/python_sys_debugger/mark1.py",
+		"/Users/ironstein/Documents/MIT/6.041/6-041-fall-2010/contents/calendar/index.htm.xml",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/working_directory/main_directory/dynamixel.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/working_directory/main_directory/pseudo_gui.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/working_directory/main_directory/gui.py",
+		"/Users/ironstein/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/.gitignore",
+		"/Users/ironstein/Desktop/urllib/test.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/DJ_Project_02/dhr_mark5/pseudo_gui.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/subordinate/exception_handling.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/main/gui.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/log.txt",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/main/dynamixel.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/subordinate/error_logging.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/subordinate/serial_ports_setup.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/main/log.txt",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/main/lookup.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/run.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/subordinate/string_handling.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara2014/main/__init__.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/DJ_Project_02/dhr_mark5/status_packet_handling.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/DJ_Project_02/ironstein_mark2/subordinate/arduino.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/DJ_Project_02/ironstein_mark2/testing/gui-exception_handling_working_test/exception_handling.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/DJ_Project_02/ironstein_mark2/subordinate/exception_handling.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/DJ_Project_02/dhr_mark5/dynamixel.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/DJ_Project_02/ironstein_mark2/testing/test/GUI.py",
+		"/Users/ironstein/Documents/projects working directory/SCARA/DJ_Project_02/ironstein_mark2/subordinate/log.txt",
+		"/Users/ironstein/Desktop/try.sh",
+		"/Users/ironstein/Desktop/try.desktop",
+		"/Users/ironstein/Documents/projects working directory/SCARA/projectscara/README.md",
+		"/Users/ironstein/Desktop/challenge/challenge.txt",
+		"/Users/ironstein/Desktop/challenge/challenge.py",
+		"/Users/ironstein/Desktop/challenge/*REPL* [python3].py",
+		"/Users/ironstein/Desktop/challenge.py",
+		"/Users/ironstein/Documents/projects working directory/machine_learning_for_object_recognition/usb_devices.txt",
+		"/Users/ironstein/Documents/projects working directory/machine_learning_for_object_recognition/*REPL* [python3].py",
+		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/project report/project_report.tex",
+		"/Users/ironstein/Documents/projects working directory/Online Courses/Stanford University Machine Learning Course/Assignments/Assignment 1/machine-learning-ex1/ex1/computeCost.m",
+		"/Users/ironstein/Documents/projects working directory/Online Courses/Stanford University Machine Learning Course/Assignments/Assignment 1/machine-learning-ex1/ex1/ex1.m",
+		"/Users/ironstein/Documents/projects working directory/SCARA/DJ_Project_02/SCARA original working codes ( dynamixel )/SCARA_arduino_final_11_march.txt",
+		"/Users/ironstein/Documents/projects working directory/graduate admissions/pertaining to resume/Resume LaTeX/resume.json",
+		"/Users/ironstein/Documents/projects working directory/graduate admissions/pertaining to resume/Resume LaTeX/cv_3.tex",
+		"/Users/ironstein/Documents/projects working directory/learning LaTex/Basics/Lesson 3/lesson_3.tex",
+		"/Users/ironstein/Documents/projects working directory/learning LaTex/Basics/Lesson 1 - basics/lesson 1 - basics.tex",
+		"/Users/ironstein/Documents/projects working directory/learning LaTex/Basics/Lesson 1/lesson_1.tex",
+		"/Users/ironstein/Documents/projects working directory/learning LaTex/Basics/Lesson 2/lesson_2.tex",
+		"/Users/ironstein/Desktop/untitled.tex",
+		"/Users/ironstein/Desktop/test.tex",
+		"/anaconda/lib/python2.7/site-packages/oct2py/ipython/octavemagic.py",
+		"/anaconda/lib/python2.7/site-packages/oct2py/core.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/9 - morphological image processing/image_processing.c",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/9 - morphological image processing/locate_file.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/9 - morphological image processing/setup.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/9 - morphological image processing/image_handling.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/9 - morphological image processing/gaussian.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/9 - morphological image processing/lib_image_processing.py",
+		"/anaconda/lib/python2.7/site-packages/oct2py/utils.py",
+		"/Users/ironstein/Desktop/test.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/7 - Array passing and returning between C and Python/libconvolution.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/7 - improving on the convolution code and adding code for nonmaximum supression/setup.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/locate_file.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/debug.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/gaussian.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/image_handling.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/setup.py",
+		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/libconvolution.py",
+		"/Users/ironstein/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/image processing/image_processing_mark2.py",
+		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/image processing/image_processing.ipynb",
+		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/image processing/rgb_to_bnw.c",
+		"/Users/ironstein/Documents/projects working directory/Final Year Project/color_to_grayscale.py",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/common words 4",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/review words",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/common words 3",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/basic words 1",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/common words 2",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/common words 1",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/run/main.py",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/advanced words 3",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/basic words 2",
+		"/Applications/Dictionary.app/Contents/Resources/DefaultStyle.css",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/advanced words 2",
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/advanced words 1"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"self.memory",
+			"read_memory",
+			"char_to_int",
+			"append",
+			"0(0x00)",
+			"LOOKUP.TXT",
+			"SEPERATOR",
+			"print",
+			"print_packet",
+			"print",
+			"print_packet",
+			"PRINT_PACKET",
+			"PRINT",
+			"lookup.txt",
+			"sys.platform",
+			"lookup.txt",
+			"make_string_from_list",
+			"function",
+			"function not",
+			")",
+			">\n",
+			"100px",
+			"images",
+			"mind palace",
+			"href",
+			"link",
+			"container",
+			"icon",
+			"*/\n",
+			"print ",
+			"scar_sim",
+			"print ",
+			"print_packet",
+			"dynamixe.inWaiting",
+			"instructions_that_require_parameters",
+			"send_and_check(",
+			"send_and_check",
+			"dynamixel.write",
+			"dynamixel.read",
+			"#",
+			"debug",
+			"python2",
+			"rana",
+			"printing complete",
+			"printing_complete",
+			"PRINT",
+			"DYNAMIXEL",
+			"import",
+			"print(",
+			"PRINT(SYS",
+			"PRINT(PLATFORM",
+			"CHECKING STACK",
+			"DYNAMIXEL",
+			"import",
+			"exception_handling",
+			"gui",
+			"status_packet_handling.",
+			"serial_ports_setup.",
+			"serial_ports_setup",
+			"()\n",
+			"return",
+			"something",
+			"change_array",
+			"max_scalable_area",
+			")\n",
+			"max_scalable_area",
+			"mod",
+			"MODS",
+			"string_to_int",
+			"decode_array",
+			"remove_useless",
+			"inspect.",
+			"sys.",
+			"glob",
+			"serial",
+			"SYS",
+			"DEBUG",
+			"string_handling",
+			"debug",
+			"send_and_check",
+			"some_file",
+			"somefile",
+			"gui.somefile",
+			"log",
+			"handle_exception",
+			"char_to_int",
+			"error_service_routine",
+			"error_logging",
+			"check_checksum",
+			"status_packet_handling",
+			"4413",
+			"1374",
+			"ZZZ",
+			"YYY",
+			"XXX",
+			"WWW",
+			"VVV",
+			"UUU",
+			"TTT",
+			"SSS",
+			"RRR",
+			"R",
+			"QQQ",
+			"PPP",
+			"OOO",
+			"NNN",
+			"MMM",
+			"LLL",
+			"KKK",
+			"JJJ",
+			"III",
+			"HHH",
+			"GGG",
+			"FFF",
+			"EEE",
+			"DDD",
+			"CCC",
+			"BBB",
+			"AAA",
+			"BODYGUARD",
+			"OEKiVEY",
+			"IQNlQSL",
+			"!",
+			"!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+			"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! [ }]",
+			"Oct2Pyerror",
+			"try",
+			"pring"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 170.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/python.sublime-build",
+	"project": "handwriting.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"common",
+				"words/common words 3"
+			],
+			[
+				"basic",
+				"words/basic words 1"
+			],
+			[
+				"falsehod",
+				"words/category wise words/Falsehood"
+			],
+			[
+				"copy",
+				"words/category wise words/Copy"
+			],
+			[
+				"commonwords",
+				"words/common words 5"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 265.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

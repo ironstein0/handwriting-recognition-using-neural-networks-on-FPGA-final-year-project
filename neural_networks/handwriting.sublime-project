@@ -1,0 +1,12 @@
+{
+	"folders":
+	[
+		{
+			"path": "codes"
+		}
+	],
+	"settings": {
+    "python_interpreter": "/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/env/bin/python"
+	}
+	
+}
