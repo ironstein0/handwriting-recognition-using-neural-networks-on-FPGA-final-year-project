@@ -212,10 +212,11 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/codes"
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks"
 	],
 	"file_history":
 	[
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/handwriting.sublime-project",
 		"/Users/ironstein/Documents/projects_working_directory/accelerometer-based-pen-mini-project-semester-5/codes/avr_C_codes/pen_mark3.c",
 		"/Users/ironstein/Documents/projects_working_directory/accelerometer-based-pen-mini-project-semester-5/codes/avr_C_codes/USART.c",
 		"/Users/ironstein/Documents/projects_working_directory/accelerometer-based-pen-mini-project-semester-5/codes/avr_C_codes/I2C.c",
@@ -342,8 +343,7 @@
 		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/advanced words 3",
 		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/basic words 2",
 		"/Applications/Dictionary.app/Contents/Resources/DefaultStyle.css",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/advanced words 2",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/advanced words 1"
+		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/advanced words 2"
 	],
 	"find":
 	{
@@ -362,6 +362,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"eta",
+			"learning_rage",
+			"a",
+			"alpha",
 			"self.memory",
 			"read_memory",
 			"char_to_int",
@@ -485,11 +489,7 @@
 			"OEKiVEY",
 			"IQNlQSL",
 			"!",
-			"!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-			"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! [ }]",
-			"Oct2Pyerror",
-			"try",
-			"pring"
+			"!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -552,7 +552,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "Packages/User/python.sublime-build",
-	"project": "handwriting.sublime-project",
+	"project": "ironstein_handwriting_recognition.sublime-project",
 	"replace":
 	{
 		"height": 42.0
