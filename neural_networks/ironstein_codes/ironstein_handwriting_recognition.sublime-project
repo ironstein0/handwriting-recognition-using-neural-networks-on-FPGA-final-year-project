@@ -7,6 +7,7 @@
 	],
 
 	"settings" : {
-		"python_interpreter" : "/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/env/bin/python"
+		// "python_interpreter" : "/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/env/bin/python"
+		"python_interpreter" : "//anaconda/bin/python"
 	}
 }

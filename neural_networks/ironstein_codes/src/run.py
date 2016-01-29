@@ -1,8 +1,8 @@
 #------------------------ CONSTANTS ---------------------------
 hidden_layer_neurons = 10
-eta = 3.0
-epochs = 10
-mini_batch_size = 10
+eta = 1.0
+epochs = 5
+mini_batch_size = 15
 #--------------------------------------------------------------
 
 #----------------------- INITIALIZATION ------------------------
@@ -25,12 +25,20 @@ def get_saving_directory() :
 	
 	return saving_directory
 
-SAVING_DIRECTORY = get_saving_directory()
+GRAPHS_SAVING_DIRECTORY = get_saving_directory()
 
 import mnist_loader
 import network
 training_data,validation_data,test_data = mnist_loader.load_data_wrapper()
 #----------------------------------------------------------------
+import matplotlib.pyplot as plt
+
+def loop() : 
+	global GRAPHS_SAVING_DIRECTORY
+
 
 net = network.Network([784,hidden_layer_neurons,10])
-net.SGD(training_data, epochs, mini_batch_size, eta, test_data=test_data)
+performance_list = net.SGD(training_data, epochs, mini_batch_size, eta, test_data=test_data)
+epoch_list = [i for i in range(epochs)]
+plt.plot(epoch_list,performance_list,'b-')
+plt.show()

@@ -51,6 +51,8 @@ class Network():
         network will be evaluated against the test data after each
         epoch, and partial progress printed out.  This is useful for
         tracking progress, but slows things down substantially."""
+
+        performance_list = []
         if test_data: n_test = len(test_data)
         n = len(training_data)
         for j in xrange(epochs):
@@ -61,10 +63,13 @@ class Network():
             for mini_batch in mini_batches:
                 self.update_mini_batch(mini_batch, eta)
             if test_data:
+                correctly_identified = self.evaluate(test_data)
                 print "Epoch {0}: {1} / {2}".format(
-                    j, self.evaluate(test_data), n_test)
+                    j,correctly_identified,n_test)
+                performance_list.append(correctly_identified)
             else:
                 print "Epoch {0} complete".format(j)
+        return performance_list
 
     def update_mini_batch(self, mini_batch, eta):
         """Update the network's weights and biases by applying
