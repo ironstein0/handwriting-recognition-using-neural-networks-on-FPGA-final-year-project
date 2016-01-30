@@ -91,6 +91,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/run.py",
+			"settings":
+			{
+				"buffer_size": 1596,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -212,10 +220,31 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks"
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/ipython_notebooks",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/test_results",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/rana_codes/data",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/rana_codes/test_results",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/references/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers-master"
 	],
 	"file_history":
 	[
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/test_results/results.txt",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/rana_codes/src/Analysis.py",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/mnist_loader.py",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/ipython_notebooks/__init__.py",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/ipython_notebooks/get_working_directory.py",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/__init__.py",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/__init__.py",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/network.py",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/rana_codes/src/network.py",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/run.py",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/ironstein_handwriting_recognition.sublime-project",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/rana_codes/src/mnist_loader.py",
+		"/Users/ironstein/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/rana_codes/Analysis.py",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/handwriting.sublime-project",
 		"/Users/ironstein/Documents/projects_working_directory/accelerometer-based-pen-mini-project-semester-5/codes/avr_C_codes/pen_mark3.c",
 		"/Users/ironstein/Documents/projects_working_directory/accelerometer-based-pen-mini-project-semester-5/codes/avr_C_codes/USART.c",
@@ -240,7 +269,6 @@
 		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/main_directory/dynamixel.py",
 		"/Users/ironstein/Documents/projects_working_directory/SCARA/projectscara2014/working_directory/subordinate_directory/status_packet_handling.py",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/Codes/tensorflow_virtualenv/source/tensorflow_basics/tensorflow_test1.py",
-		"/Users/ironstein/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/Codes/tensorflow_virtualenv/sublime/tensorflow_virtualenv.sublime-project",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/Codes/tensorflow_virtualenv/source/tensorflow_test1.py",
 		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/neural networks/tensorflow_virtualenv/source/test1.py",
@@ -330,24 +358,11 @@
 		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/libconvolution.py",
 		"/Users/ironstein/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/image processing/image_processing_mark2.py",
-		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/image processing/image_processing.ipynb",
-		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/image processing/rgb_to_bnw.c",
-		"/Users/ironstein/Documents/projects working directory/Final Year Project/color_to_grayscale.py",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/common words 4",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/review words",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/common words 3",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/basic words 1",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/common words 2",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/common words 1",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/run/main.py",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/advanced words 3",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/basic words 2",
-		"/Applications/Dictionary.app/Contents/Resources/DefaultStyle.css",
-		"/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/final_mark2/words/advanced words 2"
+		"/Users/ironstein/Documents/projects working directory/handwriting recognition using neural networks on FPGA final year project/image processing/image_processing.ipynb"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -362,6 +377,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"95",
+			"94",
+			"95",
+			"load_data",
+			"data/",
+			"()",
+			"saving_directory",
+			"evaluate",
+			"self.memory",
+			"pylab",
 			"eta",
 			"learning_rage",
 			"a",
@@ -479,17 +504,7 @@
 			"III",
 			"HHH",
 			"GGG",
-			"FFF",
-			"EEE",
-			"DDD",
-			"CCC",
-			"BBB",
-			"AAA",
-			"BODYGUARD",
-			"OEKiVEY",
-			"IQNlQSL",
-			"!",
-			"!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+			"FFF"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -507,8 +522,44 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/run.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1589,
+								1589
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 99.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"file": "test_results/eta_0.2.png",
+					"semi_transient": false,
+					"stack_index": 1,
+					"type": "image"
+				}
 			]
 		}
 	],
