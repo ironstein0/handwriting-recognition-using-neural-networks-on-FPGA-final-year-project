@@ -167,16 +167,13 @@ def open_images() :
 				break
 			else :
 				print('{0}/{1}'.format('Sample'+folder_name,image_name))
-				# print(image_path)
-				# print(image)
-				# print
-				# cv2.imshow('',numpy.concatenate((rgb_to_bnw(image,mask),rgb_to_bnw(mask)),axis=1))
 				image = reshape(rgb_to_bnw(image,mask))
 				mask = reshape(rgb_to_bnw(mask))
-				cv2.imshow('',image)
-				time.sleep(0.5)
-				# cv2.imshow('',numpy.concatenate((image,mask),axis=1))
+				if image.shape[0] < 28 or image.shape[1] < 28 :
+					count += 1	#
+				cv2.imshow('',numpy.concatenate((image,mask),axis=1))
 				# time.sleep(1)
+			print('{0}/{1} --> {2}'.format(count,total_count,image.shape))
 			image_number += 1
 
 

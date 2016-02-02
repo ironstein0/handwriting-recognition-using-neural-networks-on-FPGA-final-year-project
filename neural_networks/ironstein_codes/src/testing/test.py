@@ -19,13 +19,13 @@ def rgb_to_bnw(image,mask=None) :
 			return_image[i][j] = (sum(image[i][j])/3.0)*(mask_image[i][j]/255)
 	return return_image
 
-# @debug()
+@debug()
 def reshape(image) :
 	#asssumes a black and white image as input (will not work with RGB image) 
-	# @debug()
+	@debug()
 	def make_square(image) : 
 		
-		# @debug()
+		@debug()
 		def horizontal_stack(array_1,array_2) :
 			if array_1.shape[0] != array_2.shape[0] :
 				raise ValueError('both arrays should be of same heights') 
@@ -41,7 +41,7 @@ def reshape(image) :
 				row_count += 1
 			return return_array
 
-		# @debug()
+		@debug()
 		def vertical_stack(array1,array2) : 
 			if array_1.shape[1] != array_2.shape[1] : 
 				raise ValueError('both arrays should be of same widths')
@@ -58,7 +58,7 @@ def reshape(image) :
 				row_count += 1
 			return return_array
 
-		# @debug()
+		@debug()
 		def add_rows(image,image_width,image_height) : 
 			rows_to_add = image_width - image_height
 			concatenating_array_top = numpy.zeros([int(rows_to_add/2),image_width],dtype=numpy.uint8)
@@ -71,7 +71,7 @@ def reshape(image) :
 
 			return image
 
-		# @debug()
+		@debug()
 		def add_columns(image,image_width,image_height) : 
 			columns_to_add = image_height - image_width
 			concatenating_array_left = numpy.zeros([image_height,int(columns_to_add/2)],dtype=numpy.uint8)
