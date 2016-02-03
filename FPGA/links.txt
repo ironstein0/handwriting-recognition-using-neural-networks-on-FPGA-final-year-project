@@ -1,2 +1,0 @@
-#———————— FPGA HARDWARE ——————————
-EEVBlog basics of FPGA : http://www.eevblog.com/2013/07/20/eevblog-496-what-is-an-fpga/
