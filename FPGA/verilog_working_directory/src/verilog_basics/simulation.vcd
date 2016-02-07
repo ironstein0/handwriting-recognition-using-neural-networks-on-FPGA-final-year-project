@@ -1,0 +1,35 @@
+$date
+	Sun Feb  7 23:07:38 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module stimulus $end
+$var reg 4 ! I [3:0] $end
+$upscope $end
+$scope module stimulus $end
+$var reg 2 " S [1:0] $end
+$upscope $end
+$scope module stimulus $end
+$var wire 1 # OUT $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+b0 "
+b1100 !
+$end
+#1
+b1 "
+#2
+1#
+b10 "
+#3
+b11 "
+#4
+0#
+b0 "

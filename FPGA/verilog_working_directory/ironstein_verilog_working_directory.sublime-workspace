@@ -95,6 +95,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/verilog_basics/shift_register.v",
+			"settings":
+			{
+				"buffer_size": 872,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -214,8 +222,21 @@
 		"side_bar_visible": true,
 		"status_bar_visible": true
 	},
+	"expanded_folders":
+	[
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/FPGA/verilog_working_directory",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/FPGA/verilog_working_directory/src",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/FPGA/verilog_working_directory/src/verilog_basics"
+	],
 	"file_history":
 	[
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/FPGA/verilog_working_directory/src/verilog_basics/logic_gates.v",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/FPGA/verilog_working_directory/src/verilog_basics/hello_world.v",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/FPGA/verilog_working_directory/src/verilog_basics/basics_01.v",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/FPGA/verilog_working_directory/src/verilog_basics/shift_register.v",
+		"/Users/ironstein/Library/Application Support/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/FPGA/verilog_working_directory/src/test_mark1.v",
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/FPGA/verilog_working_directory/ironstein_verilog_working_directory.sublime-project",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/testing/test2.py",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/testing/debug.py",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/testing/data_acquisition.py",
@@ -336,14 +357,7 @@
 		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/9 - morphological image processing/gaussian.py",
 		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/9 - morphological image processing/lib_image_processing.py",
 		"/anaconda/lib/python2.7/site-packages/oct2py/utils.py",
-		"/Users/ironstein/Desktop/test.py",
-		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/7 - Array passing and returning between C and Python/libconvolution.py",
-		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/7 - improving on the convolution code and adding code for nonmaximum supression/setup.py",
-		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/locate_file.py",
-		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/debug.py",
-		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/gaussian.py",
-		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/image_handling.py",
-		"/Users/ironstein/Documents/projects working directory/learning python/Python-tutorials/C library for image processing/6 - Implementing canny edge detector/setup.py"
+		"/Users/ironstein/Desktop/test.py"
 	],
 	"find":
 	{
@@ -507,8 +521,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/verilog_basics/shift_register.v",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 872,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								481,
+								481
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Verilog/Verilog.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

@@ -287,6 +287,7 @@
 	],
 	"file_history":
 	[
+		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/ironstein_handwriting_recognition.sublime-project",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/testing/test2.py",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/testing/debug.py",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/testing/data_acquisition.py",
@@ -301,7 +302,6 @@
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/__init__.py",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/src/network.py",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/rana_codes/src/network.py",
-		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/ironstein_codes/ironstein_handwriting_recognition.sublime-project",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/rana_codes/src/mnist_loader.py",
 		"/Users/ironstein/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/ironstein/Documents/projects_working_directory/handwriting_recognition/neural_networks/rana_codes/Analysis.py",
@@ -624,8 +624,8 @@
 						"selection":
 						[
 							[
-								7430,
-								7430
+								7579,
+								7579
 							]
 						],
 						"settings":
