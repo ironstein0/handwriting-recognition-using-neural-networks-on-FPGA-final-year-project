@@ -1,0 +1,13 @@
+NET "LED1" LOC = T18;
+NET "LED2" LOC = T17;
+NET "LED3" LOC = U18;
+NET "CLK" LOC = V10 | IOSTANDARD = LVCMOS22 | PERIOD = 100MHz;	//100 MHz clock signal
+
+#------ DISABLING SEVEN SEGMENT DISPLAY -------
+NET "A2" PULLUP;
+NET "A2" LOC = A2;
+NET "B2" PULLUP;
+NET "B2" LOC = B2;
+NET "B3" PULLUP;
+NET "B3" LOC = B3;
+//--------------------------------------------
