@@ -1,0 +1,69 @@
+$date
+	Thu Feb 18 23:34:59 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module stimulus $end
+$var reg 1 ! x $end
+$upscope $end
+$scope module stimulus $end
+$var reg 1 " y $end
+$upscope $end
+$scope module stimulus $end
+$var reg 1 # a $end
+$upscope $end
+$scope module stimulus $end
+$var reg 1 $ b $end
+$upscope $end
+$scope module stimulus $end
+$var reg 1 % m $end
+$upscope $end
+$scope module stimulus $end
+$var reg 1 & p $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0&
+0%
+x$
+x#
+x"
+x!
+$end
+#2
+1&
+#4
+0&
+#5
+1#
+#6
+1&
+#8
+0&
+#10
+1&
+0!
+#12
+0&
+#14
+1&
+#16
+0&
+#18
+1&
+#20
+0&
+#22
+1&
+#24
+0&
+#26
+1&
+#28
+0&
+#30
