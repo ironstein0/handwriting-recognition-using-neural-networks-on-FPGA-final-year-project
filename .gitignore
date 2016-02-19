@@ -5,4 +5,10 @@ neural_networks/other_codes
 neural_networks/ironstein_codes/data
 image_processing/C_library_for_image_processing
 
+# ------ rana ------------
+FPGA/rana_fpga_working_dirctory
+*
+!*/
+!*.v
+
 *.pyc
