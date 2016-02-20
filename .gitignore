@@ -10,5 +10,13 @@ FPGA/rana_fpga_working_dirctory
 *
 !*/
 !*.v
+=======
 
+# ———— ironstein —————
+FPGA/xilinx_ise_project_files/
+*
+!*/
+!*.v
+!*.ucf
+#————————————————————-
 *.pyc
