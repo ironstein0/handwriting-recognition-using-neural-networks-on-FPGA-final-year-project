@@ -1,0 +1,6 @@
+
+NET "wbClk" TNM_NET = "wbClk";
+TIMESPEC TS_wbClk = PERIOD "wbClk" 9 ns;
+
+
+
