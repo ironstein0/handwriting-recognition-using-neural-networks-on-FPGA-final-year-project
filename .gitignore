@@ -18,5 +18,6 @@ FPGA/xilinx_ise_project_files/
 !*/
 !*.v
 !*.ucf
+receipts/
 #————————————————————-
 *.pyc
