@@ -43,7 +43,7 @@ module seven_segment_display_controller(
 	seven_segment_display 
 		s(
 			.digit_to_be_displayed(led_value),
-			.dp(1'b0),
+			.dp(1'b1),
 			.led(display_bits)
 		);
 
@@ -53,44 +53,41 @@ module seven_segment_display_controller(
 			led_value_register_index = 0;
 		end
 	end
+ endmodule
+// 	reg clk;
+// 	wire [2:0] led_control_signal_register;
+// 	wire led_change_tick;
+// 	wire [7:0] display_bits;
 
-endmodule
+// 	reg [3:0] led1 = 4'd0;
+// 	reg [3:0] led2 = 4'd0;
+// 	reg [3:0] led3 = 4'd0;
 
-module stimulus();
-	reg clk;
-	wire [2:0] led_control_signal_register;
-	wire led_change_tick;
-	wire [7:0] display_bits;
+// 	seven_segment_display_controller
+// 		s(
+// 			.clk(clk),
+// 			.display_bits(display_bits),
+// 			.led1_control_signal(led_control_signal_register[0]),
+// 			.led2_control_signal(led_control_signal_register[1]),
+// 			.led3_control_signal(led_control_signal_register[2]),
+// 			.led_change_tick(led_change_tick),
+// 			.led1_display_value(led1),
+// 			.led2_display_value(led2),
+// 			.led3_display_value(led3)
+// 		);
 
-	reg [3:0] led1 = 4'd0;
-	reg [3:0] led2 = 4'd0;
-	reg [3:0] led3 = 4'd0;
+// 	initial begin
+// 		$dumpfile("simulation.vcd");
+// 		$dumpvars(0,clk,led_control_signal_register,led_change_tick,display_bits);
+// 	end
 
-	seven_segment_display_controller
-		s(
-			.clk(clk),
-			.display_bits(display_bits),
-			.led1_control_signal(led_control_signal_register[0]),
-			.led2_control_signal(led_control_signal_register[1]),
-			.led3_control_signal(led_control_signal_register[2]),
-			.led_change_tick(led_change_tick),
-			.led1_display_value(led1),
-			.led2_display_value(led2),
-			.led3_display_value(led3)
-		);
+// 	initial
+// 		clk = 1'b0;
 
-	initial begin
-		$dumpfile("simulation.vcd");
-		$dumpvars(0,clk,led_control_signal_register,led_change_tick,display_bits);
-	end
+// 	always 
+// 		#1 clk = ~ clk;
 
-	initial
-		clk = 1'b0;
+// 	initial 
+// 		#100 $finish;
 
-	always 
-		#1 clk = ~ clk;
-
-	initial 
-		#100 $finish;
-
-endmodule
+// endmodule
