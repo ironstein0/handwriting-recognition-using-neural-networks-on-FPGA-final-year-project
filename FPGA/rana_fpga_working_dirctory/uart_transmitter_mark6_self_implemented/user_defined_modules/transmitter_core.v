@@ -9,13 +9,13 @@ module transmitter_core
 		parameter NO_OF_STOPBITS = 1
 		)(
 		// control signals
-		input wire clk,
-		input wire reset_switch,
-		output wire reset,
+		input wire clk,				// # CHANGE
+		input wire reset_switch,  	// # CHANGE
+		output wire reset,       	// # CHANGE
 		input wire start_transmission,
 		output reg busy,
 		// data signals
-		input wire[NO_OF_DATABITS-1:0] parallel_data,
+		input wire[NO_OF_DATABITS-1:0] parallel_data, // # CHANGE  -- data_in
 		output reg tx
 		);
 	
@@ -197,7 +197,7 @@ endmodule // transmitter_core
 ////	end
 //endmodule
 
-module stimulus(
+module synthesis_stimulus(
 	input wire CLK,
 	input wire RESET_SWITCH,
 	output wire RESET,
