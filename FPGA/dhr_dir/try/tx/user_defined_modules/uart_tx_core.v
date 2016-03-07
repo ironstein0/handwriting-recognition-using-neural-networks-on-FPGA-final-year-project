@@ -1,21 +1,20 @@
 //`timescale 1ns / 1ps
-`include "tx_baudrate_tick_generator.v"
-`include "pulse_generator.v"
-`include "reset_controller.v"
-`include "tick_generator.v"
+`include "utils/tx_baudrate_tick_generator.v"
+`include "utils/pulse_generator.v"
+`include "utils/reset_controller.v"
+`include "utils/tx_tick_generator.v"
 
-module transmitter_core
+module uart_tx_core
 	#(	parameter NO_OF_DATABITS = 8,
 		parameter NO_OF_STOPBITS = 1
 		)(
 		// control signals
-		input wire clk,
-		input wire reset_switch,
-		output wire reset,
+		input wire clk,				
+		input wire reset,       	
 		input wire start_transmission,
 		output reg busy,
 		// data signals
-		input wire[NO_OF_DATABITS-1:0] parallel_data,
+		input wire[NO_OF_DATABITS-1:0] data_in,
 		output reg tx
 		);
 	
@@ -37,11 +36,6 @@ module transmitter_core
 		.pulse(tx_start_transmission)
 	);
 	
-	reset_controller T3(
-		.clk(clk),
-		.switch_input(reset_switch),
-		.reset(reset)
-	);
 
 	// state declarations
 	localparam 
@@ -94,7 +88,7 @@ module transmitter_core
 			tx_baudrate_tick_generator_enable = 1'b0;
 
 			if(tx_start_transmission == 1) begin
-				shift_reg_next = parallel_data;	// load data
+				shift_reg_next = data_in;	// load data
 				tx_next = 0;
 				state_next = transmitting;
 			end else begin
@@ -137,10 +131,10 @@ endmodule // transmitter_core
 //	reg START_TRANSMISSION;
 //	wire BUSY;
 //	// data signals
-//	reg [7:0] PARALLEL_DATA;
+//	reg [7:0] DATA_IN;
 //	wire TX;
 //
-//	transmitter_core T
+//	uart_tx_core T
 //	(	
 //		// control signals
 //		.clk(CLK),
@@ -149,13 +143,13 @@ endmodule // transmitter_core
 //		.start_transmission(START_TRANSMISSION),
 //		.busy(BUSY),
 //		// data signals
-//		.parallel_data(PARALLEL_DATA),
+//		.data_in(DATA_IN),
 //		.tx(TX)
 //	);
 //		
 //	initial begin
 //		CLK = 1'b0;
-//		PARALLEL_DATA = 8'b11;
+//		DATA_IN = 8'b11;
 //		RESET_SWITCH = 1'b1;
 //		START_TRANSMISSION = 1'b0;
 //	end	
@@ -169,7 +163,7 @@ endmodule // transmitter_core
 //			BUSY,
 //			START_TRANSMISSION,
 //			// data signals
-//			PARALLEL_DATA,
+//			DATA_IN,
 //			TX
 //		);
 //	end 
@@ -183,7 +177,7 @@ endmodule // transmitter_core
 //	initial begin
 //		for(i=0;i<256;i=i+1) begin
 //			#150000;
-//			PARALLEL_DATA = i;
+//			DATA_IN = i;
 //			START_TRANSMISSION = ~ START_TRANSMISSION;
 //		end
 //	end
@@ -197,7 +191,7 @@ endmodule // transmitter_core
 ////	end
 //endmodule
 
-module stimulus(
+module synthesis_stimulus(
 	input wire CLK,
 	input wire RESET_SWITCH,
 	output wire RESET,
@@ -206,22 +200,28 @@ module stimulus(
 	);
 	
 	// module instantiations
-	tick_generator #(.tick_time(1000),.frequency(100000))
+	tx_tick_generator #(.tick_time(1000),.frequency(100000))
 		ti(
 			.clk(CLK),
+			.reset(RESET),
 			.tick(TICK)
 		);
 		
 	reg START_TRANSMISSION;
-	reg [7:0] PARALLEL_DATA;
+	reg [7:0] DATA_IN;
 	
-	transmitter_core t(
+	reset_controller T3(
 		.clk(CLK),
-		.reset_switch(RESET_SWITCH),
+		.switch_input(RESET_SWITCH),
+		.reset(RESET)
+	);
+
+	uart_tx_core t(
+		.clk(CLK),
 		.reset(RESET),
 		.start_transmission(START_TRANSMISSION),
 		.busy(BUSY),
-		.parallel_data(PARALLEL_DATA),
+		.data_in(DATA_IN),
 		.tx(TX)
 	);
 	
@@ -232,10 +232,10 @@ module stimulus(
 	
 	always @(posedge(TICK),posedge(RESET)) begin
 		if(RESET) begin
-			PARALLEL_DATA = 0;
+			DATA_IN = 0;
 			i = 0;
 		end else begin
-			PARALLEL_DATA = i;
+			DATA_IN = i;
 			START_TRANSMISSION = ~ START_TRANSMISSION;
 			i = i + 1;
 		end

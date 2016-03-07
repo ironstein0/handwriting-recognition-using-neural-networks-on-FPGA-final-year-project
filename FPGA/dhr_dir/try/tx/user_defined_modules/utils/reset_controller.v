@@ -16,7 +16,8 @@ module reset_controller(
 		wait2_0 = 3'b111;
 
 	// module instantiations
-	reset_tick_generator #(.tick_time(10),.frequency(1))
+	debouncing_tick_generator #(.tick_time(10),.frequency(100000))
+//	debouncing_tick_generator #(.tick_time(10),.frequency(1))
 		debounce_sampling_tick_generator(
 		.clk(clk),
 		.tick(tick)
@@ -157,8 +158,8 @@ module reset_controller(
 endmodule
 
 
-module reset_tick_generator #(
-	parameter tick_time = 32'd1000,
+module debouncing_tick_generator #(
+	parameter tick_time = 32'd10,
 	parameter frequency = 32'd100000
 	)(
 	input wire clk,
@@ -235,4 +236,3 @@ endmodule
 //	end
 //
 //endmodule
-//
