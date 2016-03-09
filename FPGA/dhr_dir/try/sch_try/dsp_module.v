@@ -62,17 +62,17 @@ module dsp_module(
    )
    DSP48A1_inst (
       // Cascade Ports: 18-bit (each) output: Ports to cascade from one DSP48 to another
-         .BCOUT(bcout),           // 18-bit output: B port cascade output                                                  UNCONNECTED
+         // .BCOUT(bcout),           // 18-bit output: B port cascade output                                               UNCONNECTED
          // .PCOUT(PCOUT),           // 48-bit output: P cascade output (if used, connect to PCIN of another DSP48A1)      UNCONNECTED
       // Data Ports: 1-bit (each) output: Data input and output ports
          // .CARRYOUT(CARRYOUT),     // 1-bit output: carry output (if used, connect to CARRYIN pin of another             UNCONNECTED
                                   // DSP48A1)
 
          // .CARRYOUTF(CARRYOUTF),   // 1-bit output: fabric carry output                                                  UNCONNECTED
-         .M(data_m),                   // 36-bit output: fabric multiplier data output                                     UNCONNECTED
+         // .M(data_m),                   // 36-bit output: fabric multiplier data output                                  UNCONNECTED
          .P(data_p),                   // 48-bit output: data output                                                       OUTPUT
       // Cascade Ports: 48-bit (each) input: Ports to cascade from one DSP48 to another
-         .PCIN(PCIN),             // 48-bit input: P cascade input (if used, connect to PCOUT of another DSP48A1)          TIED TO ZEROS
+         .PCIN(48'b0),             // 48-bit input: P cascade input (if used, connect to PCOUT of another DSP48A1)         PRE-DEFINED
       // Control Input Ports: 1-bit (each) input: Clocking and operation mode
          .CLK(clk),               // 1-bit input: clock Input                                                              INPUT
          .OPMODE(OPMODE),         // 8-bit input: operation mode Input                                                     DEFINED
@@ -87,11 +87,11 @@ module dsp_module(
       // Reset/Clock Enable Input Ports: 1-bit (each) input: Reset and enable input ports
          .CEA(clock_enable),      // 1-bit input: active high clock enable input for A registers                           DEFINED
          .CEB(clock_enable),      // 1-bit input: active high clock enable input for B registers                           DEFINED
-         .CEC(CEC),               // 1-bit input: active high clock enable input for C registers                           DEFINED
-         .CECARRYIN(CECARRYIN),   // 1-bit input: active high clock enable input for CARRYIN registers                     DEFINED
-         .CED(CED),               // 1-bit input: active high clock enable input for D registers                           DEFINED
+         .CEC(1),               // 1-bit input: active high clock enable input for C registers                             PRE-DEFINED
+         .CECARRYIN(1),   // 1-bit input: active high clock enable input for CARRYIN registers                             PRE-DEFINED
+         .CED(1),               // 1-bit input: active high clock enable input for D registers                             PRE-DEFINED
          .CEM(clock_enable),      // 1-bit input: active high clock enable input for multiplier registers                  DEFINED
-         .CEOPMODE(CEOPMODE),     // 1-bit input: active high clock enable input for OPMODE registers                      DEFINED
+         .CEOPMODE(1),     // 1-bit input: active high clock enable input for OPMODE registers                             PRE-DEFINED
          .CEP(clock_enable),      // 1-bit input: active high clock enable input for P registers                           DEFINED
          .RSTA(RESET),            // 1-bit input: reset input for A pipeline registers                                     DEFINED
          .RSTB(RESET),            // 1-bit input: reset input for B pipeline registers                                     DEFINED
@@ -107,29 +107,12 @@ module dsp_module(
    initial begin
       clock_enable <= 0;
       RESET        <= 1;
-      PCIN         <= 48'b0;
       OPMODE[1:0]  <= 1;      // Use multiplier product
       OPMODE[3:2]  <= 2;      // Use the P out signal
       OPMODE[4]    <= 0;      // Pre Adder ----> Not Needed
       OPMODE[5]    <= 0;      // Force Carry
       OPMODE[6]    <= 0;      // Pre Adder ----> Add 
       OPMODE[7]    <= 0;      // Post Adder ---> Add
-      CEA          <= 1;
-      CEB          <= 1;
-      CEC          <= 1;
-      CECARRYIN    <= 1;
-      CED          <= 1;
-      CEM          <= 1; 
-      CEOPMODE     <= 1;
-      CEP          <= 1;
-      RSTA         <= 0;
-      RSTB         <= 0;
-      RSTC         <= 0;
-      RSTD         <= 0;
-      RSTM         <= 0;
-      RSTP         <= 0;
-      RSTOPMODE    <= 0;
-      RSTCARRYIN   <= 0;
    end //initial	
 	
 	always @(posedge clk) begin
@@ -141,12 +124,11 @@ module dsp_module(
          if(valid_inputs) begin
             clock_enable <= 1;
          end // if(valid_inputs)
-      end // else
+         else begin
+            clock_enable <= 0;
+         end // else(valid_inputs)
+      end // else(reset)
 	end // always
-   
-   always @(negedge clk) begin
-      clock_enable <= 0;
-   end // always
 
 endmodule // module dsp_module
 
@@ -154,27 +136,27 @@ module testbench();
    reg CLK;
    reg [17:0] DATA_A,DATA_B;
    wire [47:0] DATA_P;
-   wire [35:0] DATA_M;
-   wire [17:0] BCOUT;
-   reg A_VALID,B_VALID,C_VALID,D_VALID;
+   // wire [35:0] DATA_M;
+   // wire [17:0] BCOUT;
+   reg A_VALID,B_VALID;
 
    dsp_module d(
       .clk(CLK),
       .data_a(DATA_A),
       .data_b(DATA_B),
       .data_p(DATA_P),
-      .data_m(DATA_M),
-      .bcout (BCOUT),
+      // .data_m(DATA_M),
+      // .bcout (BCOUT),
       .a_valid(A_VALID),
-      .b_valid(B_VALID),
-      .c_valid(C_VALID),
-      .d_valid(D_VALID)
+      .b_valid(B_VALID)
       );
 
    initial begin
       CLK = 0;
       DATA_A = 0;
       DATA_B = 0;
+		A_VALID = 0;
+		B_VALID = 0;
    end
 
    always begin
@@ -182,33 +164,38 @@ module testbench();
    end
 
    initial begin
-      #110 DATA_A = 20;
+      #120 DATA_A = 20;
       DATA_B = 2;
-      #3 A_VALID = 1;
+      A_VALID = 1;
       B_VALID = 1;
-      #15 A_VALID = 0;
+      #10 A_VALID = 0;
       B_VALID = 0;
 
-      #20 DATA_A = 2;
+      #10 DATA_A = 2;
       DATA_B = 30;
       A_VALID = 1;
       B_VALID = 1;
-      #15 A_VALID = 0;
+      #10 A_VALID = 0;
       B_VALID = 0;
       
-      #20 DATA_A = 30;
+      #10 DATA_A = 30;
       DATA_B = 3;
       A_VALID = 1;
       B_VALID = 1;
-      #15 A_VALID = 0;
+      #10 A_VALID = 0;
       B_VALID = 0;
       
-      #25 DATA_A = 9;
+      #10 DATA_A = 9;
       DATA_B = 10;
       A_VALID = 1;
       B_VALID = 1;
-      #15 A_VALID = 0;
+      #10 A_VALID = 0;
       B_VALID = 0;
+		
+		#10 DATA_A = 0;
+      DATA_B = 0;
+      A_VALID = 1;
+      B_VALID = 1;
 	end
 
 endmodule // module testbench
