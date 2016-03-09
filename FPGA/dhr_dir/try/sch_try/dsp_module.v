@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module dsp_module(
    input wire clk,
-   input wire reset,   //asynchronous
+   input wire reset,   //synchronous
    input wire [17:0] data_a,data_b,data_d,
    input wire a_valid,b_valid,c_valid,d_valid,
    output wire p_ready, m_ready,
@@ -30,7 +30,6 @@ module dsp_module(
    output wire [17:0] bcout
     );
    
-   reg RESET;
    reg clock_enable;
    reg [47:0] PCIN;
    reg [7:0] OPMODE;
@@ -58,7 +57,7 @@ module dsp_module(
       .MREG(1),               // M pipeline register (0/1)
       .OPMODEREG(1),          // Enable=1/disable=0 OPMODE input pipeline registers
       .PREG(1),               // P output pipeline register (0/1)
-      .RSTTYPE("ASYNC")        // Specify reset type, "SYNC" or "ASYNC" 
+      .RSTTYPE("SYNC")        // Specify reset type, "SYNC" or "ASYNC" 
    )
    DSP48A1_inst (
       // Cascade Ports: 18-bit (each) output: Ports to cascade from one DSP48 to another
@@ -93,20 +92,19 @@ module dsp_module(
          .CEM(clock_enable),      // 1-bit input: active high clock enable input for multiplier registers                  DEFINED
          .CEOPMODE(1),     // 1-bit input: active high clock enable input for OPMODE registers                             PRE-DEFINED
          .CEP(clock_enable),      // 1-bit input: active high clock enable input for P registers                           DEFINED
-         .RSTA(RESET),            // 1-bit input: reset input for A pipeline registers                                     DEFINED
-         .RSTB(RESET),            // 1-bit input: reset input for B pipeline registers                                     DEFINED
-         .RSTC(RESET),            // 1-bit input: reset input for C pipeline registers                                     DEFINED
-         .RSTCARRYIN(RESET),      // 1-bit input: reset input for CARRYIN pipeline registers                               DEFINED
-         .RSTD(RESET),            // 1-bit input: reset input for D pipeline registers                                     DEFINED
-         .RSTM(RESET),            // 1-bit input: reset input for M pipeline registers                                     DEFINED
-         .RSTOPMODE(RESET),       // 1-bit input: reset input for OPMODE pipeline registers                                DEFINED
-         .RSTP(RESET)             // 1-bit input: reset input for P pipeline registers                                     DEFINED
+         .RSTA(reset),            // 1-bit input: reset input for A pipeline registers                                     DEFINED
+         .RSTB(reset),            // 1-bit input: reset input for B pipeline registers                                     DEFINED
+         .RSTC(reset),            // 1-bit input: reset input for C pipeline registers                                     DEFINED
+         .RSTCARRYIN(reset),      // 1-bit input: reset input for CARRYIN pipeline registers                               DEFINED
+         .RSTD(reset),            // 1-bit input: reset input for D pipeline registers                                     DEFINED
+         .RSTM(reset),            // 1-bit input: reset input for M pipeline registers                                     DEFINED
+         .RSTOPMODE(reset),       // 1-bit input: reset input for OPMODE pipeline registers                                DEFINED
+         .RSTP(reset)             // 1-bit input: reset input for P pipeline registers                                     DEFINED
    );
    // End of DSP48A1_inst instantiation
 	
    initial begin
       clock_enable <= 0;
-      RESET        <= 1;
       OPMODE[1:0]  <= 1;      // Use multiplier product
       OPMODE[3:2]  <= 2;      // Use the P out signal
       OPMODE[4]    <= 0;      // Pre Adder ----> Not Needed
@@ -116,24 +114,19 @@ module dsp_module(
    end //initial	
 	
 	always @(posedge clk) begin
-      if(reset) begin
-         RESET = 1;
-      end // if(reset)
+      if(valid_inputs) begin
+         clock_enable <= 1;
+      end // if(valid_inputs)
       else begin
-         RESET = 0;
-         if(valid_inputs) begin
-            clock_enable <= 1;
-         end // if(valid_inputs)
-         else begin
-            clock_enable <= 0;
-         end // else(valid_inputs)
-      end // else(reset)
+         clock_enable <= 0;
+      end // else(valid_inputs)
 	end // always
 
 endmodule // module dsp_module
 
 module testbench();
    reg CLK;
+   reg RESET;
    reg [17:0] DATA_A,DATA_B;
    wire [47:0] DATA_P;
    // wire [35:0] DATA_M;
@@ -142,6 +135,7 @@ module testbench();
 
    dsp_module d(
       .clk(CLK),
+      .reset(RESET),
       .data_a(DATA_A),
       .data_b(DATA_B),
       .data_p(DATA_P),
@@ -157,6 +151,7 @@ module testbench();
       DATA_B = 0;
 		A_VALID = 0;
 		B_VALID = 0;
+		RESET = 0;
    end
 
    always begin
@@ -196,6 +191,7 @@ module testbench();
       DATA_B = 0;
       A_VALID = 1;
       B_VALID = 1;
+		#30 RESET = 1;
 	end
 
 endmodule // module testbench
