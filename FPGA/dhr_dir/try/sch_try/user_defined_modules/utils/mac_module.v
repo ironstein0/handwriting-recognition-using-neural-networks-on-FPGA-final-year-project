@@ -1,24 +1,4 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    16:20:19 03/08/2016 
-// Design Name: 
-// Module Name:    dsp_module 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-// 
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-// 
-//////////////////////////////////////////////////////////////////////////////////
-module dsp_module(
+module mac_module(
    input wire clk,
    input wire reset,   //synchronous
    input wire [17:0] data_a,data_b,data_d,
@@ -122,76 +102,74 @@ module dsp_module(
       end // else(valid_inputs)
 	end // always
 
-endmodule // module dsp_module
+endmodule // module mac_module
 
-module testbench();
-   reg CLK;
-   reg RESET;
-   reg [17:0] DATA_A,DATA_B;
-   wire [47:0] DATA_P;
-   // wire [35:0] DATA_M;
-   // wire [17:0] BCOUT;
-   reg A_VALID,B_VALID;
+// module testbench();
+//    reg CLK;
+//    reg RESET;
+//    reg [17:0] DATA_A,DATA_B;
+//    wire [47:0] DATA_P;
+//    // wire [35:0] DATA_M;
+//    // wire [17:0] BCOUT;
+//    reg A_VALID,B_VALID;
 
-   dsp_module d(
-      .clk(CLK),
-      .reset(RESET),
-      .data_a(DATA_A),
-      .data_b(DATA_B),
-      .data_p(DATA_P),
-      // .data_m(DATA_M),
-      // .bcout (BCOUT),
-      .a_valid(A_VALID),
-      .b_valid(B_VALID)
-      );
+//    dsp_module d(
+//       .clk(CLK),
+//       .reset(RESET),
+//       .data_a(DATA_A),
+//       .data_b(DATA_B),
+//       .data_p(DATA_P),
+//       .a_valid(A_VALID),
+//       .b_valid(B_VALID)
+//       );
 
-   initial begin
-      CLK = 0;
-      DATA_A = 0;
-      DATA_B = 0;
-		A_VALID = 0;
-		B_VALID = 0;
-		RESET = 0;
-   end
+//    initial begin
+//       CLK = 0;
+//       DATA_A = 0;
+//       DATA_B = 0;
+// 		A_VALID = 0;
+// 		B_VALID = 0;
+// 		RESET = 0;
+//    end
 
-   always begin
-      #5 CLK = ~ CLK;
-   end
+//    always begin
+//       #5 CLK = ~ CLK;
+//    end
 
-   initial begin
-      #120 DATA_A = 20;
-      DATA_B = 2;
-      A_VALID = 1;
-      B_VALID = 1;
-      #10 A_VALID = 0;
-      B_VALID = 0;
+//    initial begin
+//       #120 DATA_A = 20;
+//       DATA_B = 2;
+//       A_VALID = 1;
+//       B_VALID = 1;
+//       #10 A_VALID = 0;
+//       B_VALID = 0;
 
-      #10 DATA_A = 2;
-      DATA_B = 30;
-      A_VALID = 1;
-      B_VALID = 1;
-      #10 A_VALID = 0;
-      B_VALID = 0;
+//       #10 DATA_A = 2;
+//       DATA_B = 30;
+//       A_VALID = 1;
+//       B_VALID = 1;
+//       #10 A_VALID = 0;
+//       B_VALID = 0;
       
-      #10 DATA_A = 30;
-      DATA_B = 3;
-      A_VALID = 1;
-      B_VALID = 1;
-      #10 A_VALID = 0;
-      B_VALID = 0;
+//       #10 DATA_A = 30;
+//       DATA_B = 3;
+//       A_VALID = 1;
+//       B_VALID = 1;
+//       #10 A_VALID = 0;
+//       B_VALID = 0;
       
-      #10 DATA_A = 9;
-      DATA_B = 10;
-      A_VALID = 1;
-      B_VALID = 1;
-      #10 A_VALID = 0;
-      B_VALID = 0;
+//       #10 DATA_A = 9;
+//       DATA_B = 10;
+//       A_VALID = 1;
+//       B_VALID = 1;
+//       #10 A_VALID = 0;
+//       B_VALID = 0;
 		
-		#10 DATA_A = 0;
-      DATA_B = 0;
-      A_VALID = 1;
-      B_VALID = 1;
-		#30 RESET = 1;
-	end
+// 		#10 DATA_A = 0;
+//       DATA_B = 0;
+//       A_VALID = 1;
+//       B_VALID = 1;
+// 		#30 RESET = 1;
+// 	end
 
-endmodule // module testbench
+// endmodule // module testbench
