@@ -1,11 +1,21 @@
-//`include "pulse_generator.v"
+`include "pulse_generator.v"
+
+module mac_module_test(
+   input wire clk,
+   input wire reset,   //synchronous
+   input wire [17:0] data_a,data_b,
+   input wire mac_start_operation,
+   output wire [47:0] data_p,
+   output wire clock_enable_pulse
+   );
 
 module mac_module(
    input wire clk,
    input wire reset,   //synchronous
    input wire [17:0] data_a,data_b,
    input wire mac_start_operation,
-   output wire [47:0] data_p
+   output wire [47:0] data_p,
+   output wire clock_enable_pulse
    );
 
    localparam [7:0] 
@@ -17,11 +27,10 @@ module mac_module(
       // OPMODE[6]    <= 0;      // Pre Adder ----> Add 
       // OPMODE[7]    <= 0;      // Post Adder ---> Add
 
-   wire clock_enable_pulse;
-	// DSP48A1: 48-bit Multi-Functional Arithmetic Block
+   // DSP48A1: 48-bit Multi-Functional Arithmetic Block
    //          Spartan-6
    // Xilinx HDL Language Template, version 14.7
-	
+   
    DSP48A1 #(
       .A0REG(0),              // First stage A input pipeline register (0/1)
       .A1REG(0),              // Second stage A input pipeline register (0/1)
@@ -82,73 +91,10 @@ module mac_module(
 
    pulse_generator #(
       .PULSE_WIDTH(32'd1)
-      ) pulse_gen(
+      ) p8(
       .clk(clk),
       .generate_pulse(mac_start_operation), // toggle pulse generator
       .pulse(clock_enable_pulse) // generates a PULSE on this wire
       );
-	
+   
 endmodule // module mac_module
-
-// module testbench();
-//    reg CLK;
-//    reg RESET;
-//    reg [17:0] DATA_A,DATA_B;
-//    wire [47:0] DATA_P;
-//    // wire [35:0] DATA_M;
-//    // wire [17:0] BCOUT;
-//    reg A_VALID,B_VALID;
-
-// 	reg toggle_to_generate;
-
-//    mac_module m(
-//       .clk (CLK),
-//       .reset (RESET),
-//       .data_a (DATA_A),
-//       .data_b (DATA_B),
-//       .mac_start_operation (toggle_to_generate),
-//       .data_p (DATA_P)
-//       );
-
-//    initial begin
-// 		toggle_to_generate <= 0;
-//       CLK <= 0;
-//       DATA_A <= 0;
-//       DATA_B <= 0;
-// 		A_VALID <= 0;
-// 		B_VALID <= 0;
-// 		RESET <= 0;
-//    end
-
-//    always begin
-//       #5 CLK = ~ CLK;
-//    end
-
-//    initial begin
-// 		#125 DATA_A = 20;
-//       DATA_B = 2;
-//       toggle_to_generate = ~toggle_to_generate;
-
-//       #10 DATA_A = 2;
-//       DATA_B = 30;
-//       toggle_to_generate = ~toggle_to_generate;
-      
-//       #20 DATA_A = 30;
-//       DATA_B = 3;
-//       toggle_to_generate = ~toggle_to_generate;      
-		
-// 		#10 DATA_A = 100;
-//       DATA_B = 10;
-		
-//       #20 DATA_A = 9;
-//       DATA_B = 10;
-//       toggle_to_generate = ~toggle_to_generate;
-
-// 		#40 DATA_A = 0;
-//       DATA_B = 0;
-//       toggle_to_generate = ~toggle_to_generate;
-      
-// 		#50 RESET = 1;
-// 	end
-
-// endmodule // module testbench
