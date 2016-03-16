@@ -25,7 +25,7 @@ module seven_segment_display (
 	end
 endmodule
 
-// module stimulus();
+// module test_bench();
 // 		reg [3:0] DIGIT_TO_BE_DISPLAYED;
 // 		reg DP;
 // 		wire [7:0] LED;
