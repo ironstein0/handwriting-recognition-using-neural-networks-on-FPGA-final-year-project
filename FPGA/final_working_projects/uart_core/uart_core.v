@@ -42,96 +42,21 @@ module uart_core(
 
 endmodule 
 
-//module test_bench();
-//	reg CLK;
-//	reg RESET_SWITCH;
-//	wire RESET;
-//	// transmitter related signals
-//	reg TX_START_TRANSMISSION;
-//	wire TX_BUSY;
-//	wire TX;
-//	reg [7:0] TX_DATA_IN;
-//	// receiver related signals
-//	wire RX;
-//	wire [7:0] RX_DATA_OUT;
-//	wire RX_DONE_TICK;
-//
-//	assign RX = TX;
-//	
-//	// module instantiations
-//	uart_core u(
-//		.clk(CLK),
-//		.reset(RESET),
-//		.rx_done_tick(RX_DONE_TICK),
-//		.tx_start_transmission(TX_START_TRANSMISSION),
-//		.tx_busy(TX_BUSY),
-//		.rx(RX),
-//		.rx_data_out(RX_DATA_OUT),
-//		.tx(TX),
-//		.tx_data_in(TX_DATA_IN)
-//		);
-//	
-//	reset_controller r1(
-//		.clk(CLK),
-//		.reset(RESET),
-//		.switch_input(RESET_SWITCH)
-//		);
-//	
-//	initial begin
-//		$dumpfile("simulation.vcd");
-//		$dumpvars(0,
-//			CLK,
-//			RESET,
-//			RESET_SWITCH,
-//			TX_START_TRANSMISSION,
-//			TX_BUSY,
-//			TX,
-//			TX_DATA_IN,
-//			RX,
-//			RX_DATA_OUT,
-//			RX_DONE_TICK
-//		);
-//	end
-//
-//	initial begin
-//		CLK = 1'b0;
-//		RESET_SWITCH = 1'b1;
-//		TX_START_TRANSMISSION = 1'b0;
-//		TX_DATA_IN = 8'b00001111;
-//	end
-// 
-//	always begin
-//		#1 CLK = ~ CLK;
-//	end
-// 
-//	initial begin
-//		#2 RESET_SWITCH = 1'b0;
-//		#2 RESET_SWITCH = 1'b1;
-//		#70 TX_START_TRANSMISSION = ~ TX_START_TRANSMISSION;
-//	end
-//
-//	initial begin
-//		#1000000 $finish;
-//	end
-//endmodule
-
-module synthesis_stimulus(
-	input wire CLK,
-	input wire RESET_SWITCH,
-	output wire RESET,
+module test_bench();
+	reg CLK;
+	reg RESET_SWITCH;
+	wire RESET;
 	// transmitter related signals
-	output wire TX,
-	// receiver related signals
-	input wire RX,
-	output wire RX_DONE_TICK
-	);
-	
-	// transmitter related signals	
 	reg TX_START_TRANSMISSION;
 	wire TX_BUSY;
+	wire TX;
 	reg [7:0] TX_DATA_IN;
 	// receiver related signals
+	wire RX;
 	wire [7:0] RX_DATA_OUT;
+	wire RX_DONE_TICK;
+
+	assign RX = TX;
 	
 	// module instantiations
 	uart_core u(
@@ -151,9 +76,84 @@ module synthesis_stimulus(
 		.reset(RESET),
 		.switch_input(RESET_SWITCH)
 		);
+	
+	initial begin
+		$dumpfile("simulation.vcd");
+		$dumpvars(0,
+			CLK,
+			RESET,
+			RESET_SWITCH,
+			TX_START_TRANSMISSION,
+			TX_BUSY,
+			TX,
+			TX_DATA_IN,
+			RX,
+			RX_DATA_OUT,
+			RX_DONE_TICK
+		);
+	end
 
-	always @ (posedge(RX_DONE_TICK)) begin
-		TX_DATA_IN = RX_DATA_OUT;
-		TX_START_TRANSMISSION = ~TX_START_TRANSMISSION;
+	initial begin
+		CLK = 1'b0;
+		RESET_SWITCH = 1'b1;
+		TX_START_TRANSMISSION = 1'b0;
+		TX_DATA_IN = 8'b00001111;
+	end
+
+	always begin
+		#1 CLK = ~ CLK;
+	end
+
+	initial begin
+		#2 RESET_SWITCH = 1'b0;
+		#2 RESET_SWITCH = 1'b1;
+		#70 TX_START_TRANSMISSION = ~ TX_START_TRANSMISSION;
+	end
+
+	initial begin
+		#1000000 $finish;
 	end
 endmodule
+
+// module synthesis_stimulus(
+// 	input wire CLK,
+// 	input wire RESET_SWITCH,
+// 	output wire RESET,
+// 	// transmitter related signals
+// 	output wire TX,
+// 	// receiver related signals
+// 	input wire RX,
+// 	output wire RX_DONE_TICK
+// 	);
+	
+// 	// transmitter related signals	
+// 	reg TX_START_TRANSMISSION;
+// 	wire TX_BUSY;
+// 	reg [7:0] TX_DATA_IN;
+// 	// receiver related signals
+// 	wire [7:0] RX_DATA_OUT;
+	
+// 	// module instantiations
+// 	uart_core u(
+// 		.clk(CLK),
+// 		.reset(RESET),
+// 		.rx_done_tick(RX_DONE_TICK),
+// 		.tx_start_transmission(TX_START_TRANSMISSION),
+// 		.tx_busy(TX_BUSY),
+// 		.rx(RX),
+// 		.rx_data_out(RX_DATA_OUT),
+// 		.tx(TX),
+// 		.tx_data_in(TX_DATA_IN)
+// 		);
+	
+// 	reset_controller r1(
+// 		.clk(CLK),
+// 		.reset(RESET),
+// 		.switch_input(RESET_SWITCH)
+// 		);
+
+// 	always @ (posedge(RX_DONE_TICK)) begin
+// 		TX_DATA_IN = RX_DATA_OUT;
+// 		TX_START_TRANSMISSION = ~TX_START_TRANSMISSION;
+// 	end
+// endmodule

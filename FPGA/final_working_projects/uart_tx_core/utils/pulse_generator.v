@@ -11,6 +11,7 @@ module pulse_generator #(
 	
 	initial begin
 		count = 0;
+		previous_pulse_value = 1'b0;
 		pulse = 1'b0;
 	end
 	
