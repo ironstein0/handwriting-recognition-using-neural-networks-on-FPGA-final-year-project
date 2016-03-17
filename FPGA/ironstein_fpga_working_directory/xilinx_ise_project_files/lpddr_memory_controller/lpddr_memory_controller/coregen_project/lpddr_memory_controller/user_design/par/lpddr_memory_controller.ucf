@@ -1,0 +1,125 @@
+// VCC AUX VOLTAGE
+CONFIG VCCAUX=2.5; # Valid values are 2.5 and 3.3
+############################################################################
+# Extended MCB performance mode requires a different Vccint specification to
+# achieve higher maximum frequencies for DDR2 and DDR3.Consult the Spartan-6
+#datasheet (DS162) table 2 and 24 for more information 
+############################################################################
+CONFIG MCB_PERFORMANCE= STANDARD;
+
+// TIMING IGNORE CONSTRAINTS FOR PATHS CROSSING THE CLOCK DOMAIN
+NET "lpddr_memory_controller_instance1/memc?_wrapper_inst/mcb_ui_top_inst/mcb_raw_wrapper_inst/selfrefresh_mcb_mode" TIG;
+NET "lpddr_memory_controller_instance1/c?_pll_lock" TIG;
+############################################################################
+## Memory Controller 3                               
+## Memory Device: LPDDR->MT46H32M16XXXX-5 
+## Frequency: 100 MHz
+## Time Period: 10000 ps
+## Supported Part Numbers: MT46H32M16LFBF-5
+############################################################################
+
+############################################################################	
+# All the IO resources in an IO tile which contains DQSP/UDQSP are used		
+# irrespective of a single-ended or differential DQS design. Any signal that	
+# is connected to the free pin of the same IO tile in a single-ended design	
+# will be unrouted. Hence, the IOB cannot used as general pupose IO.			
+############################################################################	
+CONFIG PROHIBIT = P1,L3;
+
+// CLOCK CONSTRAINTS
+NET "lpddr_memory_controller_instance1/memc3_infrastructure_inst/sys_clk_ibufg" TNM_NET = "SYS_CLK3";
+TIMESPEC "TS_SYS_CLK3" = PERIOD "SYS_CLK3"  10  ns HIGH 50 %;
+############################################################################
+
+// LPDDR RAM SIGNALS
+	// I/O STANDARDS
+	NET  "dram_dq[*]"                               IOSTANDARD = MOBILE_DDR;
+	NET  "dram_a[*]"                                IOSTANDARD = MOBILE_DDR;
+	NET  "dram_ba[*]"                               IOSTANDARD = MOBILE_DDR;
+	NET  "dram_dqs"                                 IOSTANDARD = MOBILE_DDR;
+	NET  "dram_udqs"                                IOSTANDARD = MOBILE_DDR;
+	NET  "dram_ck"                                  IOSTANDARD = DIFF_MOBILE_DDR;
+	NET  "dram_ck_n"                                IOSTANDARD = DIFF_MOBILE_DDR;
+	NET  "dram_cke"                                 IOSTANDARD = MOBILE_DDR;
+	NET  "dram_ras_n"                               IOSTANDARD = MOBILE_DDR;
+	NET  "dram_cas_n"                               IOSTANDARD = MOBILE_DDR;
+	NET  "dram_we_n"                                IOSTANDARD = MOBILE_DDR;
+	NET  "dram_dm"                                  IOSTANDARD = MOBILE_DDR;
+	NET  "dram_udm"                                 IOSTANDARD = MOBILE_DDR;
+	NET  "dram_rzq"                                 IOSTANDARD = MOBILE_DDR;
+	// PIN LOCATION CONSTRAINTS
+	NET  "dram_a[0]"                            LOC = "J7" ;
+	NET  "dram_a[10]"                           LOC = "F4" ;
+	NET  "dram_a[11]"                           LOC = "D3" ;
+	NET  "dram_a[12]"                           LOC = "G6" ;
+	NET  "dram_a[1]"                            LOC = "J6" ;
+	NET  "dram_a[2]"                            LOC = "H5" ;
+	NET  "dram_a[3]"                            LOC = "L7" ;
+	NET  "dram_a[4]"                            LOC = "F3" ;
+	NET  "dram_a[5]"                            LOC = "H4" ;
+	NET  "dram_a[6]"                            LOC = "H3" ;
+	NET  "dram_a[7]"                            LOC = "H6" ;
+	NET  "dram_a[8]"                            LOC = "D2" ;
+	NET  "dram_a[9]"                            LOC = "D1" ;
+	NET  "dram_ba[0]"                           LOC = "F2" ;
+	NET  "dram_ba[1]"                           LOC = "F1" ;
+	NET  "dram_cas_n"                           LOC = "K5" ;
+	NET  "dram_ck"                              LOC = "G3" ;
+	NET  "dram_ck_n"                            LOC = "G1" ;
+	NET  "dram_cke"                             LOC = "H7" ;
+	NET  "dram_dm"                              LOC = "K3" ;
+	NET  "dram_dq[0]"                           LOC = "L2" ;
+	NET  "dram_dq[10]"                          LOC = "N2" ;
+	NET  "dram_dq[11]"                          LOC = "N1" ;
+	NET  "dram_dq[12]"                          LOC = "T2" ;
+	NET  "dram_dq[13]"                          LOC = "T1" ;
+	NET  "dram_dq[14]"                          LOC = "U2" ;
+	NET  "dram_dq[15]"                          LOC = "U1" ;
+	NET  "dram_dq[1]"                           LOC = "L1" ;
+	NET  "dram_dq[2]"                           LOC = "K2" ;
+	NET  "dram_dq[3]"                           LOC = "K1" ;
+	NET  "dram_dq[4]"                           LOC = "H2" ;
+	NET  "dram_dq[5]"                           LOC = "H1" ;
+	NET  "dram_dq[6]"                           LOC = "J3" ;
+	NET  "dram_dq[7]"                           LOC = "J1" ;
+	NET  "dram_dq[8]"                           LOC = "M3" ;
+	NET  "dram_dq[9]"                           LOC = "M1" ;
+	NET  "dram_dqs"                             LOC = "L4" ;
+	NET  "dram_ras_n"                           LOC = "L5" ;
+	NET  "dram_udm"                             LOC = "K4" ;
+	NET  "dram_udqs"                            LOC = "P2" ;
+	NET  "dram_we_n"                            LOC = "E3" ;
+	#RZQ is required for all MCB designs.
+	NET  "dram_rzq"                                  LOC = "N4" ;
+
+// CLOCK AND RESET SIGNALS
+NET "sys_clk"           LOC = "V10" | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz;	// 100MHz clock signal;
+NET "pll_reset_switch"	LOC = "M18" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+NET "reset_switch"      LOC = "L18" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+NET "sys_rst_n" 			LOC = "P15" | IOSTANDARD = LVCMOS33;
+NET "rst0"					LOC = "P16" | IOSTANDARD = LVCMOS33;
+NET "calib_done"			LOC = "N15" | IOSTANDARD = LVCMOS33;
+NET "reset" 				LOC = "N16" | IOSTANDARD = LVCMOS33;
+
+// UART SIGNALS
+NET "uart_tx" 					LOC = "B8"  | IOSTANDARD = LVCMOS33;
+NET "uart_rx" 					LOC = "A8"  | IOSTANDARD = LVCMOS33;
+
+// SEVEN SEGMENT DISPLAY CONNECTIONS
+NET issd_led1_control_signal LOC = B3 | IOSTANDARD = LVCMOS33;
+NET issd_led2_control_signal LOC = A2 | IOSTANDARD = LVCMOS33;
+NET issd_led3_control_signal LOC = B2 | IOSTANDARD = LVCMOS33;
+NET issd_led_change_tick 	  LOC = U17 | IOSTANDARD = LVCMOS33;
+
+NET issd_display_bits[0] 	  LOC = A5 | IOSTANDARD = LVCMOS33;
+NET issd_display_bits[1] 	  LOC = C6 | IOSTANDARD = LVCMOS33;
+NET issd_display_bits[2] 	  LOC = D6 | IOSTANDARD = LVCMOS33;
+NET issd_display_bits[3] 	  LOC = C5 | IOSTANDARD = LVCMOS33;
+NET issd_display_bits[4] 	  LOC = C4 | IOSTANDARD = LVCMOS33;
+NET issd_display_bits[5] 	  LOC = A4 | IOSTANDARD = LVCMOS33;
+NET issd_display_bits[6] 	  LOC = B4 | IOSTANDARD = LVCMOS33;
+NET issd_display_bits[7] 	  LOC = A3 | IOSTANDARD = LVCMOS33;
+
+NET "one_second_tick"		  LOC = U18 | IOSTANDARD = LVCMOS33;
+NET "wr_full" 					  LOC = T17 | IOSTANDARD = LVCMOS33;
+

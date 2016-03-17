@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 module tick_generator #(
 	parameter tick_time = 32'd1000,
 	parameter frequency = 32'd100000
@@ -45,7 +44,6 @@ endmodule
 // 	initial
 // 		#100 $finish;
 
-=======
 module tick_generator #(
 	parameter tick_time = 32'd1000,
 	parameter frequency = 32'd100000
@@ -95,5 +93,4 @@ endmodule
 // 	initial
 // 		#100 $finish;
 //
->>>>>>> ec2f395f58ec55b634ec0e8be638cdf5c51c4871
 // endmodule
