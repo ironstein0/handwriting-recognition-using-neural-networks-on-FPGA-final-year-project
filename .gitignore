@@ -19,6 +19,7 @@ FPGA/xilinx_ise_project_files/
 !*.v
 !*.ucf
 receipts/
+technical_paper/
 
 # ------ dhr -------
 FPGA/dhr_fpga_working_dirctory

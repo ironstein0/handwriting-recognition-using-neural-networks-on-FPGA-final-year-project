@@ -14,6 +14,6 @@ void for_loop_test_with_register_values(int n) {
     int p;     
     
     for(i=0;i<var;i++){
-        for(p=0;p<10000;p++);
+        for(p=0;p<100000000;p++);
     }
 }

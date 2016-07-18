@@ -1,0 +1,26 @@
+NET clk LOC = V10 | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz; // 100 MHz clock signal
+
+// UART CONNECTIONS
+NET tx LOC = B8;
+NET rx LOC = A8;
+
+// RESET CONNECTIONS
+NET reset_switch LOC = M18 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+NET reset LOC = P15;
+
+#// OTHER SIGNALS
+#NET RX_DONE_TICK LOC = P16;
+
+// SEVEN SEGMENT DISPLAY CONNECTIONS
+NET led1_control_signal LOC = B3;
+NET led2_control_signal LOC = A2;
+NET led3_control_signal LOC = B2;
+
+NET display_bits[0] LOC = A5;
+NET display_bits[1] LOC = C6;
+NET display_bits[2] LOC = D6;
+NET display_bits[3] LOC = C5;
+NET display_bits[4] LOC = C4;
+NET display_bits[5] LOC = A4;
+NET display_bits[6] LOC = B4;
+NET display_bits[7] LOC = A3;

@@ -1,0 +1,222 @@
+//`timescale 1ns / 1ps
+`include "utils/tx_baudrate_tick_generator.v"
+`include "utils/pulse_generator.v"
+`include "utils/my_fifo.v"
+//`include "utils/reset_controller.v"
+//`include "utils/tx_tick_generator.v"
+
+module uart_tx_core
+	#(	parameter NO_OF_DATABITS = 8,
+		parameter NO_OF_STOPBITS = 1,
+		parameter BAUDRATE = 32'd9600,
+		parameter FREQUENCY = 32'd100000000
+		)(
+		// control signals
+		input wire clk,				
+		input wire reset,       	
+		input wire start_transmission,
+		output reg busy,
+		// data signals
+		input wire [NO_OF_DATABITS-1:0] data_in,
+		output reg tx
+		);
+	
+	// module instantitation
+		// tx baudrate tick generator initialization
+		reg tx_baudrate_tick_generator_enable;
+		
+		tx_baudrate_tick_generator #(.baudrate(BAUDRATE),.frequency(FREQUENCY))
+			T1(
+				.clk(clk),
+				.reset(reset),
+				.enable(tx_baudrate_tick_generator_enable),
+				.tick(tick)
+			);
+		
+		// pulse generator initialization
+		pulse_generator #(.PULSE_WIDTH(32'd1))
+			T2(
+			.clk(clk),
+			.reset(reset),
+			.generate_pulse(start_transmission),
+			.pulse(tx_start_transmission)
+		);
+
+		wire fifo_push;
+		wire fifo_pop;
+		wire fifo_full;
+		wire fifo_empty;
+		wire [7:0] fifo_input;
+		assign fifo_input = data_in;
+		wire [7:0] fifo_output;
+		wire [127:0] fifo_count;
+
+		// my_fifo initialization
+		fifo #(.data_size(4'd8),.buffer_size(8'd128))
+			my_fifo_instance1(
+				.clk(clk),
+				.reset(reset),
+				.read_data(fifo_pop),
+				.write_data(fifo_push),
+				.full(fifo_full),
+				.empty(fifo_empty),
+				.data_input(fifo_input),
+				.data_output(fifo_output),
+				.fifo_count(fifo_count)
+			);
+
+		// fifo push pulse generator initialization
+		wire generate_fifo_push_pulse;
+		assign generate_fifo_push_pulse = start_transmission;
+
+		pulse_generator push_pulse_generator(
+			.clk(clk),
+			.reset(reset),
+			.generate_pulse(generate_fifo_push_pulse),
+			.pulse(fifo_push)
+		);
+
+		// fifo pop pulse generator initialization
+		reg generate_fifo_pop_pulse;
+		pulse_generator pop_pulse_generator(
+			.clk(clk),
+			.reset(reset),
+			.generate_pulse(generate_fifo_pop_pulse),
+			.pulse(fifo_pop)
+		);
+
+
+	// state declarations
+	localparam [1:0]
+		idle = 2'b00,
+		fetching = 2'b01,
+		transmitting = 2'b10;
+
+	// constants
+	localparam [2:0] 
+		POP_DELAY = 0;
+
+	// signals
+	reg [1:0] state_reg, state_next;
+	reg [3:0] count,count_next;
+	reg busy_next;
+	reg [NO_OF_DATABITS-1 : 0] shift_reg, shift_reg_next;
+	reg tx_next;
+	reg generate_fifo_pop_pulse_next;
+	reg [1:0] wait_count,wait_count_next;
+
+	// state updation logic
+
+		always @(negedge(clk),posedge(reset)) begin
+			if(reset) begin
+				busy <= 0;
+			end else begin
+				busy <= busy_next;
+			end
+		end
+
+		always @(posedge(clk),posedge(reset)) begin
+			if(reset) begin
+				state_reg <= idle;
+				count <= 0;
+				shift_reg <= 0;
+				tx <= 1;
+				generate_fifo_pop_pulse <= 0;
+				wait_count <= 0;
+			end else begin
+				state_reg <= state_next;
+				count <= count_next;
+				shift_reg <= shift_reg_next;
+				tx <= tx_next;
+				generate_fifo_pop_pulse <= generate_fifo_pop_pulse_next;
+				wait_count <= wait_count_next;
+			end
+		end
+
+	// next state logic
+	
+		always @* begin
+			if(tx_start_transmission) begin
+				busy_next = 1;
+			end else begin
+				if((state_reg == transmitting) && (state_next == idle) && (fifo_empty)) begin
+					busy_next = 0;
+				end else begin
+					busy_next = busy;
+				end
+			end
+		end
+
+		always @* begin
+			if(state_reg == idle) begin
+				// mealey outputs
+				tx_next = 1;
+				count_next = 0;
+				tx_baudrate_tick_generator_enable = 1'b0;
+				shift_reg_next = shift_reg;
+				wait_count_next = 0;
+
+				if(~fifo_empty) begin
+					state_next = fetching;
+					generate_fifo_pop_pulse_next = ~ generate_fifo_pop_pulse;
+				end else begin
+					state_next = state_reg;
+					generate_fifo_pop_pulse_next = generate_fifo_pop_pulse;
+					busy_next = 0;
+				end
+
+			end else if(state_reg == fetching) begin
+				count_next = 0;
+				tx_baudrate_tick_generator_enable = 1'b0;
+				generate_fifo_pop_pulse_next = generate_fifo_pop_pulse;
+
+				if(wait_count == POP_DELAY) begin
+					shift_reg_next = fifo_output;
+					state_next = transmitting;
+					wait_count_next = 0;
+					tx_next = 0;
+				end else begin
+					shift_reg_next = shift_reg;
+					state_next = fetching;
+					wait_count_next = wait_count + 1;
+					tx_next = 0;
+				end
+
+			end else if(state_reg == transmitting) begin
+				// mealey outputs
+				tx_baudrate_tick_generator_enable = 1'b1;
+				wait_count_next = wait_count;
+				generate_fifo_pop_pulse_next = generate_fifo_pop_pulse;
+				
+				if(tick==1) begin
+					if(count == 8) begin
+						tx_next = 1;
+						count_next = 0;
+						shift_reg_next = shift_reg;
+						state_next = idle;
+					end else begin
+						tx_next = shift_reg[0];
+						shift_reg_next = {1'b0,shift_reg[NO_OF_DATABITS-1:1]};
+						count_next = count + 1;
+						state_next = state_reg;
+					end
+				end else begin
+					count_next = count;
+					shift_reg_next = shift_reg;
+					state_next = state_reg;
+					tx_next = tx;
+				end
+			
+			end else begin
+				state_next = state_reg;
+				count_next = count;
+				shift_reg_next = shift_reg;
+				tx_next = tx;
+				generate_fifo_pop_pulse_next = generate_fifo_pop_pulse;
+				wait_count_next = wait_count;
+				tx_baudrate_tick_generator_enable = 1'b0;
+			end
+
+		end
+
+endmodule // transmitter_core
