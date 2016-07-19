@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-FPGA/references/
-neural_networks/references/
-neural_networks/env
+*/references/
 neural_networks/other_codes
 neural_networks/ironstein_codes/data
-image_processing/C_library_for_image_processing
+technical_paper/
 
 # ------ rana ------------
 FPGA/rana_fpga_working_dirctory
@@ -30,10 +27,35 @@ FPGA/dhr_fpga_working_dirctory
 !*.ucf
 
 #————————————————————-
-=======
+*.pyc
+
 */references/
 neural_networks/other_codes
 neural_networks/ironstein_codes/data
 technical_paper/
->>>>>>> feature_neural_networks
+
+# ------ rana ------------
+FPGA/rana_fpga_working_dirctory
+*
+!*/
+!*.v
+!*.ucf
+
+# ———— ironstein —————
+FPGA/xilinx_ise_project_files/
+*
+!*/
+!*.v
+!*.ucf
+receipts/
+technical_paper/
+
+# ------ dhr -------
+FPGA/dhr_fpga_working_dirctory
+*
+!*/
+!*.v
+!*.ucf
+
+#————————————————————-
 *.pyc
