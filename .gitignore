@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FPGA/references/
 neural_networks/references/
 neural_networks/env
@@ -29,4 +30,10 @@ FPGA/dhr_fpga_working_dirctory
 !*.ucf
 
 #————————————————————-
+=======
+*/references/
+neural_networks/other_codes
+neural_networks/ironstein_codes/data
+technical_paper/
+>>>>>>> feature_neural_networks
 *.pyc
